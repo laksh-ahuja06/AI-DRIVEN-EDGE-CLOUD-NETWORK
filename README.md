@@ -61,4 +61,4 @@ This is a clean, minimal skeleton — each module maps to one spec section and c
 - Add a WebSocket endpoint to `central_server.py` for push updates instead of the dashboard's polling.
 
 Note: this code demonstrates the *mechanism* described in your spec (edge classification, AI-driven QoS, packet-loss reconstruction, prediction API). It is not a verified, evaluated system — the "AI" pieces (classification thresholds, interpolation) are simple, explainable placeholders you should replace with the trained models described in your report once you have data to train on.
-# AI-DRIVEN-EDGE-CLOUD-NETWORK
+
