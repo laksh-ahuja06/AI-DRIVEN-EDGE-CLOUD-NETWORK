@@ -1,2 +1,9 @@
 fastapi
 uvicorn[standard]
+websockets      # WebSocket push to the dashboard
+numpy
+pillow          # satellite frame PNG previews (--save-frames)
+matplotlib      # plots in evaluate.py (optional)
+pytest          # tests
+httpx           # FastAPI TestClient used by the tests
+# pyserial      # only for hardware/serial_bridge.py (LoRa upgrade)

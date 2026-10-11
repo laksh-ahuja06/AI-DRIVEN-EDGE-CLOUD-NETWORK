@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyclone Edge-Cloud Monitor</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg: #0b1220; --panel: #121b2e; --line: #23304a; --text: #e6edf3; --muted: #8b9bb4;
+    --accent: #7dd3fc; --ok: #22c55e; --warn: #facc15; --bad: #f87171; --crit-bg: #7f1d1d; --ok-bg: #14532d;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, Segoe UI, Arial, sans-serif; background: var(--bg); color: var(--text); }
+  header { padding: 16px 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between; }
+  h1 { margin: 0; font-size: 20px; color: var(--accent); }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; }
+  main { padding: 0 20px 24px; display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+  .span12 { grid-column: span 12; } .span8 { grid-column: span 8; } .span4 { grid-column: span 4; } .span6 { grid-column: span 6; }
+  @media (max-width: 900px) { .span8, .span4, .span6 { grid-column: span 12; } }
+  #banner { padding: 12px 16px; border-radius: 10px; font-weight: 600; font-size: 16px; }
+  .alert-on { background: var(--crit-bg); } .alert-off { background: var(--ok-bg); }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+  .kpi { background: #0e1626; border: 1px solid var(--line); border-radius: 8px; padding: 10px; }
+  .kpi .v { font-size: 22px; font-weight: 700; } .kpi .l { font-size: 12px; color: var(--muted); }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  th { color: var(--muted); font-weight: 600; }
+  .crit { color: var(--bad); font-weight: 700; } .recon { color: var(--warn); } .muted { color: var(--muted); }
+  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+  .chart { background: #0e1626; border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+  .chart canvas { width: 100%; height: 150px; display: block; }
+  .legend { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .legend span { margin-right: 10px; }
+  .sat { display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap; }
+  #thumb { width: 144px; height: 144px; image-rendering: pixelated; border: 1px solid var(--line); border-radius: 6px; background: #000; }
+  .bar { height: 8px; background: #0e1626; border-radius: 4px; overflow: hidden; margin-top: 4px; }
+  .bar > div { height: 100%; background: var(--accent); }
+  #conn { font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AI-Driven Edge-Cloud Cyclone Monitoring</h1>
+  <span id="conn" class="muted">connecting...</span>
+</header>
+<main>
+  <div class="span12"><div id="banner" class="alert-off">Waiting for data...</div></div>
+
+  <section class="panel span12">
+    <div class="kpis">
+      <div class="kpi"><div class="v" id="k-risk">-</div><div class="l">Fused cyclone risk</div></div>
+      <div class="kpi"><div class="v" id="k-fc">-</div><div class="l">Forecast peak risk (10 readings)</div></div>
+      <div class="kpi"><div class="v" id="k-rx">-</div><div class="l">Packets received</div></div>
+      <div class="kpi"><div class="v recon" id="k-rec">-</div><div class="l">Reconstructed (gap repair)</div></div>
+      <div class="kpi"><div class="v recon" id="k-conc">-</div><div class="l">Concealed in real time</div></div>
+      <div class="kpi"><div class="v" id="k-bw">-</div><div class="l">Satellite bandwidth saved</div></div>
+      <div class="kpi"><div class="v" id="k-lat">-</div><div class="l">Critical latency p95 (gateway to server)</div></div>
+    </div>
+  </section>
+
+  <section class="panel span8">
+    <h2>Sensor nodes</h2>
+    <table id="nodes"><thead><tr><th>Node</th><th>Seq</th><th>Wind km/h</th><th>Temp °C</th><th>Pressure hPa</th>
+      <th>Risk</th><th>Class</th><th>Source</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section class="panel span4">
+    <h2>Satellite edge AI</h2>
+    <div class="sat">
+      <canvas id="thumb" width="24" height="24"></canvas>
+      <div id="satinfo" class="muted">No satellite station yet.</div>
+    </div>
+  </section>
+
+  <section class="panel span12">
+    <h2>Telemetry history <span class="muted">(wind = blue, pressure = green; yellow dots = reconstructed, hollow = provisional forecast)</span></h2>
+    <div class="charts" id="charts"></div>
+  </section>
+
+  <section class="panel span6">
+    <h2>Gateway QoS <span id="gwpolicy" class="muted"></span></h2>
+    <table id="qos"><thead><tr><th>Class</th><th>Sent</th><th>Queued</th><th>Shed</th><th>Dropped</th>
+      <th>Avg wait</th><th>p95 wait</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section class="panel span6">
+    <h2>Node health (non-essential traffic)</h2>
+    <table id="hk"><thead><tr><th>Node</th><th>Battery V</th><th>RSSI dBm</th><th>Last</th></tr></thead><tbody></tbody></table>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = (v, d = 1) => (v === null || v === undefined) ? '-' : Number(v).toFixed(d);
+
+function drawSeries(canvas, series) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = canvas.clientWidth, h = canvas.clientHeight;
+  canvas.width = w * dpr; canvas.height = h * dpr;
+  const ctx = canvas.getContext('2d'); ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, w, h);
+  if (!series.length) return;
+  const pad = 6, n = series.length;
+  const x = i => pad + (w - 2 * pad) * (n === 1 ? 0.5 : i / (n - 1));
+  const plot = (key, color, lo, hi) => {
+    const vals = series.map(r => r[key]);
+    let mn = Math.min(...vals, lo), mx = Math.max(...vals, hi);
+    if (mx - mn < 1e-6) mx = mn + 1;
+    const y = v => h - pad - (h - 2 * pad) * (v - mn) / (mx - mn);
+    ctx.strokeStyle = color; ctx.lineWidth = 1.6; ctx.beginPath();
+    series.forEach((r, i) => i ? ctx.lineTo(x(i), y(r[key])) : ctx.moveTo(x(i), y(r[key])));
+    ctx.stroke();
+    series.forEach((r, i) => {
+      if (!r.reconstructed) return;
+      ctx.beginPath(); ctx.arc(x(i), y(r[key]), 3, 0, 2 * Math.PI);
+      if (r.provisional) { ctx.strokeStyle = '#facc15'; ctx.stroke(); ctx.strokeStyle = color; }
+      else { ctx.fillStyle = '#facc15'; ctx.fill(); }
+    });
+    return y;
+  };
+  const yw = plot('wind', '#60a5fa', 0, 70);
+  ctx.setLineDash([4, 4]); ctx.strokeStyle = '#f87171'; ctx.beginPath();
+  ctx.moveTo(pad, yw(60)); ctx.lineTo(w - pad, yw(60)); ctx.stroke(); ctx.setLineDash([]);
+  plot('pressure', '#4ade80', 985, 1012);
+}
+
+function render(d) {
+  const banner = $('banner');
+  banner.className = d.alert ? 'alert-on' : 'alert-off';
+  const c = d.components || {};
+  banner.textContent = `${d.alert ? 'CYCLONE ALERT ACTIVE' : 'Normal conditions'} - fused risk ${fmt(d.overall_risk)} ` +
+    `(in-situ ${fmt(c.in_situ)}, satellite ${fmt(c.satellite)}, forecast ${fmt(c.forecast)}) | reconstruction: ${esc(d.reconstruction)}`;
+
+  const s = d.stats || {}, m = d.metrics || {};
+  $('k-risk').textContent = fmt(d.overall_risk);
+  $('k-fc').textContent = fmt(c.forecast);
+  $('k-rx').textContent = s.received ?? '-';
+  $('k-rec').textContent = s.reconstructed ?? '-';
+  $('k-conc').textContent = s.concealed ?? '-';
+  const bw = m.bandwidth || {};
+  $('k-bw').textContent = bw.reduction_pct == null ? '-' : bw.reduction_pct.toFixed(2) + '%';
+  const lat = (m.latency_gateway_to_server || {}).CRITICAL || {};
+  $('k-lat').textContent = lat.p95_ms == null ? '-' : lat.p95_ms + ' ms';
+
+  const tbody = document.querySelector('#nodes tbody');
+  tbody.innerHTML = '';
+  for (const [node, r] of Object.entries(d.nodes || {})) {
+    const src = r.provisional ? 'forecast' : r.late_recovered ? 'late packet' : r.reconstructed ? 'reconstructed' : 'measured';
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${esc(node)}</td><td>${esc(r.seq)}</td><td>${fmt(r.wind)}</td><td>${fmt(r.temp)}</td>
+      <td>${fmt(r.pressure)}</td><td>${fmt(r.risk)}</td>
+      <td class="${r.traffic_class === 'CRITICAL' ? 'crit' : ''}">${esc(r.traffic_class)}${r.ml_prob != null ? ` <span class="muted">(ML ${fmt(r.ml_prob, 2)})</span>` : ''}</td>
+      <td class="${r.reconstructed ? 'recon' : ''}">${src}</td>`;
+    tbody.appendChild(tr);
+  }
+
+  const charts = $('charts');
+  for (const [node, series] of Object.entries(d.series || {})) {
+    let box = document.getElementById('chart-' + node);
+    if (!box) {
+      box = document.createElement('div'); box.className = 'chart'; box.id = 'chart-' + node;
+      box.innerHTML = `<div><strong>${esc(node)}</strong></div><canvas></canvas><div class="legend"></div>`;
+      charts.appendChild(box);
+    }
+    drawSeries(box.querySelector('canvas'), series);
+    const fc = (d.forecast || {})[node];
+    box.querySelector('.legend').innerHTML = fc
+      ? `<span>Forecast next ${fc.steps}: wind up to ${fmt(Math.max(...fc.wind))} km/h, pressure down to ${fmt(Math.min(...fc.pressure))} hPa</span>`
+      : '<span>collecting history...</span>';
+  }
+
+  const sats = Object.values(d.satellite || {});
+  if (sats.length) {
+    const st = sats[0];
+    if (st.thumb) {
+      const px = Uint8Array.from(atob(st.thumb), ch => ch.charCodeAt(0));
+      const size = st.thumb_size || 24, cv = $('thumb'), ctx = cv.getContext('2d');
+      cv.width = size; cv.height = size;
+      const img = ctx.createImageData(size, size);
+      px.forEach((v, i) => { img.data.set([v, v, Math.min(255, v + 30), 255], i * 4); });
+      ctx.putImageData(img, 0, 0);
+    }
+    $('satinfo').innerHTML = `<div><strong>${esc(st.node)}</strong> frame ${esc(st.seq)}</div>
+      <div>Risk: <span class="${st.risk_flag ? 'crit' : ''}">${fmt(st.sat_risk)}</span>${st.risk_flag ? ' (flag)' : ''}</div>
+      <div class="bar"><div style="width:${Math.min(100, st.sat_risk || 0)}%"></div></div>
+      <div>Cold-cloud cover: ${fmt(100 * (st.cold_frac || 0), 1)}% | coldest top ${fmt(st.min_bt)} K</div>
+      <div>Symmetry ${fmt(st.symmetry, 2)} | eye contrast ${fmt(st.eye_contrast)} K</div>
+      <div>Raw ${(st.raw_bytes / 1e6).toFixed(2)} MB (zlib ${((st.zlib_bytes || 0) / 1e6).toFixed(2)} MB) to ${esc(st.sent_bytes)} B sent</div>
+      <div>Edge inference ${fmt(st.infer_ms)} ms</div>`;
+  }
+
+  const gw = d.gateway || {};
+  $('gwpolicy').textContent = gw.policy ? `(scheduler ${gw.policy}, classifier ${gw.classifier}, ${gw.rate_bps} B/s, ` +
+    `${gw.alert ? 'ALERT' : 'normal'}, ML early flags ${gw.ml_early})` : '(no gateway stats yet)';
+  const qb = document.querySelector('#qos tbody'); qb.innerHTML = '';
+  for (const [cls, st] of Object.entries(gw.classes || {})) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="${cls === 'CRITICAL' ? 'crit' : ''}">${esc(cls)}</td><td>${st.sent}</td>
+      <td>${(gw.queued || {})[cls] ?? 0}</td><td>${st.shed}</td><td>${st.dropped}</td>
+      <td>${st.avg_wait_ms} ms</td><td>${st.p95_wait_ms} ms</td>`;
+    qb.appendChild(tr);
+  }
+
+  const hb = document.querySelector('#hk tbody'); hb.innerHTML = '';
+  for (const [node, r] of Object.entries(d.housekeeping || {})) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${esc(node)}</td><td>${fmt(r.battery_v, 2)}</td><td>${esc(r.rssi)}</td><td>${esc(r.time)}</td>`;
+    hb.appendChild(tr);
+  }
+}
+
+// WebSocket push with polling fallback.
+let pollTimer = null;
+function startPolling() {
+  if (pollTimer) return;
+  $('conn').textContent = 'polling /snapshot (WebSocket unavailable)';
+  pollTimer = setInterval(async () => {
+    try { render(await (await fetch('/snapshot')).json()); } catch (e) { $('conn').textContent = 'server unreachable'; }
+  }, 2000);
+}
+function connect() {
+  const ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/ws');
+  ws.onopen = () => { $('conn').textContent = 'live (WebSocket)'; if (pollTimer) { clearInterval(pollTimer); pollTimer = null; } };
+  ws.onmessage = (ev) => render(JSON.parse(ev.data));
+  ws.onclose = () => { startPolling(); setTimeout(connect, 3000); };
+}
+connect();
+</script>
+</body>
+</html>
