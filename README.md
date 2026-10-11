@@ -118,6 +118,58 @@ All hosts/ports are environment variables (defaults in brackets): `BIND_HOST` (0
 `GATEWAY_TO_SERVER_PORT` (9002), `GATEWAY_CONTROL_PORT` (9003), `NODE_ALERT_PORT` (9004),
 `RECON_METHOD` (lstm | linear).
 
+## Project Files
+
+**Core pipeline**
+- **`common.py`** – Shared settings used by every component: the telemetry message format, network ports and cyclone thresholds.
+  Also validates incoming packets and sorts traffic into CRITICAL / NORMAL / NON_ESSENTIAL.
+- **`sensor_node.py`** – Simulates an ocean buoy or coastal radar that sends wind, temperature and pressure readings over UDP.
+  It drops packets on purpose to imitate a lossy marine link, and simulates a cyclone passing over it.
+- **`satellite_station.py`** – Simulates a satellite ground station that receives large multi-band satellite images.
+  It runs edge AI on each image and sends only a ~1 KB summary instead of the ~2 MB raw image.
+- **`edge_gateway.py`** – The edge gateway: it receives all sensor traffic, checks it, and labels each packet by importance (fixed rules + ML).
+  Critical packets are sent to the server first over a limited-bandwidth link, and the gateway switches into alert mode during a cyclone.
+- **`central_server.py`** – The FastAPI prediction server: it detects lost packets, fills the gaps with the LSTM, and calculates the cyclone risk.
+  It provides REST and WebSocket APIs for the dashboard and tells the gateway when to enter alert mode.
+- **`dashboard.html`** – Live monitoring dashboard showing risk, node readings, charts with reconstructed values, and QoS statistics.
+  It updates over a WebSocket and needs no external libraries, so it works offline.
+
+**AI / networking modules**
+- **`edge_ai.py`** – Analyses satellite images (cold cloud cover, symmetry, eye detection) to produce a cyclone risk score.
+  Also contains the ML classifier that spots rising cyclone risk from pressure and wind trends, before the thresholds are crossed.
+- **`qos.py`** – The scheduler that decides which packet goes next on the limited-bandwidth backbone (critical first).
+  Keeps some bandwidth free for critical traffic and drops low-value packets only when the link is congested; it also has a plain first-come-first-served mode for comparison.
+- **`lstm.py`** – A small LSTM neural network written in plain NumPy, including its training code.
+  It needs no PyTorch or TensorFlow, so it can run on a laptop or a Raspberry Pi.
+- **`reconstruction.py`** – Uses the LSTM (or straight-line interpolation as a baseline) to estimate telemetry lost to packet loss.
+  It also predicts readings in real time while a packet is overdue.
+- **`ocean_model.py`** – A physics-based model of a cyclone passing over the sensors (wind and pressure change with distance from the eye).
+  Also models a realistic bursty lossy link, where packets are lost in clusters as with rain fade.
+
+**Training, evaluation & demo**
+- **`train_models.py`** – Trains the LSTM and the QoS classifier on 280 randomly generated cyclone scenarios.
+  Saves the trained models to the `models/` folder.
+- **`evaluate.py`** – Runs the evaluation experiments: packet-loss recovery error, QoS latency, classifier accuracy and bandwidth savings.
+  Writes the results to `results/REPORT.md` with plots.
+- **`run_demo.py`** – Starts the server, gateway, sensors and satellite station with one command.
+  Logs from each component go to `logs/` and a live summary prints in the terminal.
+- **`mininet_topology.py`** – Optional Mininet setup that runs the system on a simulated WAN with realistic bandwidth, delay and loss.
+  It follows the same network layout as the Cisco Packet Tracer design.
+
+**Hardware**
+- **`hardware/esp32_buoy/esp32_buoy.ino`** – Firmware for a real ESP32 + BMP280 sensor node that sends the same telemetry over Wi-Fi.
+  It turns on an LED and buzzer when the gateway reports a cyclone alert.
+- **`hardware/lora_buoy/` & `hardware/lora_receiver/`** – Optional LoRa radio upgrade: a buoy node and a receiver node.
+  They replace Wi-Fi with a genuinely low-bandwidth, lossy radio link.
+- **`hardware/serial_bridge.py`** – Reads LoRa packets from the receiver ESP32 over USB serial.
+  Converts them to the project's telemetry format and forwards them to the edge gateway.
+- **`hardware/README.md`** – Hardware guide covering the parts list with prices, wiring, flashing steps and a demo script for the review.
+
+**Other**
+- **`models/`** – The trained LSTM and QoS classifier, so the project works without retraining.
+- **`results/`** – Evaluation report, raw results (JSON) and plots produced by `evaluate.py`.
+- **`tests/`** – 28 automated tests covering validation, QoS, the LSTM, gap reconstruction, the gateway, the server API and the hardware packet formats.
+
 ## Hardware
 
 See **[hardware/README.md](hardware/README.md)**: ESP32 + BMP280 sensor nodes (about
