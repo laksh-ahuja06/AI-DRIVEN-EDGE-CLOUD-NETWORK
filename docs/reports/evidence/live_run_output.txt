@@ -1,0 +1,110 @@
+Starting AI-driven edge-cloud cyclone network demo
+  started server         pid=342  -> logs/server.log
+  started gateway        pid=352  -> logs/gateway.log
+  started buoy_07        pid=360  -> logs/buoy_07.log
+  started buoy_12        pid=361  -> logs/buoy_12.log
+  started radar_a        pid=362  -> logs/radar_a.log
+  started satellite      pid=363  -> logs/satellite.log
+
+Dashboard: http://127.0.0.1:8000   (Ctrl+C to stop)
+
+[    5s] risk= 17.8 alert=False rx=20 reconstructed=0 concealed=0 critical=0
+[   10s] risk= 17.2 alert=False rx=38 reconstructed=0 concealed=0 critical=0
+[   15s] risk= 17.9 alert=False rx=56 reconstructed=3 concealed=0 critical=0
+[   20s] risk= 17.2 alert=False rx=75 reconstructed=3 concealed=0 critical=0
+[   25s] risk= 21.0 alert=False rx=94 reconstructed=5 concealed=0 critical=0
+[   30s] risk= 26.9 alert=False rx=111 reconstructed=6 concealed=0 critical=0
+[   35s] risk= 43.1 alert=False rx=128 reconstructed=9 concealed=1 critical=0
+[   40s] risk= 52.3 alert=False rx=147 reconstructed=10 concealed=1 critical=0
+[   45s] risk= 76.7 alert=True  rx=163 reconstructed=13 concealed=1 critical=2
+[   50s] risk= 82.7 alert=True  rx=179 reconstructed=15 concealed=2 critical=4
+[   55s] risk= 82.5 alert=True  rx=197 reconstructed=17 concealed=2 critical=11
+[   60s] risk= 83.2 alert=True  rx=216 reconstructed=19 concealed=2 critical=18
+[   65s] risk= 86.9 alert=True  rx=232 reconstructed=19 concealed=2 critical=30
+[   70s] risk=100.0 alert=True  rx=249 reconstructed=23 concealed=4 critical=42
+[   75s] risk= 86.6 alert=True  rx=268 reconstructed=26 concealed=6 critical=57
+
+Final metrics:
+{
+  "latency_gateway_to_server": {
+    "CRITICAL": {
+      "n": 57,
+      "avg_ms": 100.5,
+      "p95_ms": 388.0
+    },
+    "NORMAL": {
+      "n": 170,
+      "avg_ms": 215.9,
+      "p95_ms": 1324.9
+    },
+    "NON_ESSENTIAL": {
+      "n": 41,
+      "avg_ms": 1436.6,
+      "p95_ms": 9585.6
+    }
+  },
+  "bandwidth": {
+    "sat_raw_bytes": 52428800,
+    "sat_sent_bytes": 27095,
+    "sat_zlib_bytes": 42559180,
+    "reduction_pct": 99.948,
+    "reduction_vs_zlib_pct": 99.936
+  },
+  "recovery": {
+    "sensor_packets": 202,
+    "reconstructed": 26,
+    "concealed_realtime": 6,
+    "late_recovered": 1,
+    "method": "lstm"
+  }
+}
+{
+  "policy": "priority",
+  "alert": true,
+  "rate_bps": 1200,
+  "queued": {
+    "CRITICAL": 0,
+    "NORMAL": 0,
+    "NON_ESSENTIAL": 0
+  },
+  "classes": {
+    "CRITICAL": {
+      "enqueued": 52,
+      "sent": 52,
+      "dropped": 0,
+      "shed": 0,
+      "bytes": 24911,
+      "avg_wait_ms": 109.8,
+      "p95_wait_ms": 387.7,
+      "max_wait_ms": 969.2
+    },
+    "NORMAL": {
+      "enqueued": 170,
+      "sent": 170,
+      "dropped": 0,
+      "shed": 0,
+      "bytes": 57123,
+      "avg_wait_ms": 215.8,
+      "p95_wait_ms": 1325.1,
+      "max_wait_ms": 1772.1
+    },
+    "NON_ESSENTIAL": {
+      "enqueued": 39,
+      "sent": 39,
+      "dropped": 0,
+      "shed": 3,
+      "bytes": 8731,
+      "avg_wait_ms": 1465.5,
+      "p95_wait_ms": 9585.1,
+      "max_wait_ms": 9778.9
+    }
+  },
+  "node": "GATEWAY",
+  "seq": 37,
+  "kind": "gateway_stats",
+  "classifier": "hybrid",
+  "invalid": 0,
+  "ml_early": 29,
+  "server_risk": 100.0,
+  "t_sent": 1791809641.569
+}

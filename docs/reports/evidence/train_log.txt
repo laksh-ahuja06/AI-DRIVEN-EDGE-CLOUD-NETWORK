@@ -1,0 +1,26 @@
+Simulating 280 cyclone scenarios...
+LSTM: 22560 training windows, 1520 validation windows, hidden=32
+  epoch   1/20  train mse=0.11032  val mse=0.12391
+  epoch   2/20  train mse=0.08217  val mse=0.10596
+  epoch   3/20  train mse=0.07663  val mse=0.10704
+  epoch   4/20  train mse=0.07354  val mse=0.10482
+  epoch   5/20  train mse=0.07113  val mse=0.10792
+  epoch   6/20  train mse=0.06955  val mse=0.09687
+  epoch   7/20  train mse=0.06788  val mse=0.09469
+  epoch   8/20  train mse=0.06744  val mse=0.09371
+  epoch   9/20  train mse=0.06535  val mse=0.09642
+  epoch  10/20  train mse=0.06595  val mse=0.10011
+  epoch  11/20  train mse=0.06343  val mse=0.09343
+  epoch  12/20  train mse=0.06302  val mse=0.09236
+  epoch  13/20  train mse=0.06301  val mse=0.09351
+  epoch  14/20  train mse=0.06212  val mse=0.10647
+  epoch  15/20  train mse=0.06306  val mse=0.09003
+  epoch  16/20  train mse=0.06109  val mse=0.08962
+  epoch  17/20  train mse=0.05997  val mse=0.08919
+  epoch  18/20  train mse=0.05850  val mse=0.08647
+  epoch  19/20  train mse=0.05817  val mse=0.08274
+  epoch  20/20  train mse=0.05882  val mse=0.08914
+LSTM trained in 19s; val mse=0.0891 vs 0.2647 for a no-change forecast
+saved /home/user/AI-DRIVEN-EDGE-CLOUD-NETWORK/models/lstm_recon.npz
+QoS classifier: 45600 samples (14.4% positive); val precision=0.732 recall=0.983
+saved /home/user/AI-DRIVEN-EDGE-CLOUD-NETWORK/models/qos_classifier.npz
