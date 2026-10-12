@@ -118,6 +118,63 @@ All hosts/ports are environment variables (defaults in brackets): `BIND_HOST` (0
 `GATEWAY_TO_SERVER_PORT` (9002), `GATEWAY_CONTROL_PORT` (9003), `NODE_ALERT_PORT` (9004),
 `RECON_METHOD` (lstm | linear).
 
+## Bandwidth-Aware Prioritisation (QoS)
+
+When the link between the edge gateway and the central server is slow, the **edge gateway sends the most important data first**. Prioritisation happens at the gateway, right before the constrained link, because that's where the bandwidth runs out.
+
+```
+Sensors ──► Edge Gateway ──[ limited bandwidth link ]──► Central Server
+             ▲
+             └─ queues packets and sends the most important first
+```
+
+### Traffic classes
+
+| Priority | Class | Examples | When bandwidth is short |
+|---|---|---|---|
+| 1st | **CRITICAL** | Wind ≥ 60 km/h, pressure ≤ 990 hPa, ML early warning, satellite risk flag | Always sent first, without waiting |
+| 2nd | **NORMAL** | Regular sensor readings | Sent when no critical packet is waiting |
+| 3rd | **NON-ESSENTIAL** | Battery level, signal strength | Dropped at the gateway if the link is congested during a cyclone alert |
+
+### Rules during a cyclone alert
+
+- **Reserved bandwidth:** a NORMAL or NON-ESSENTIAL packet is sent only if ~700 bytes of link capacity stay free afterwards, so a CRITICAL packet arriving next goes out immediately instead of waiting behind it.
+- **Congestion-only shedding:** non-essential packets are dropped only when more than 1 second of traffic is already queued.
+- **No wasted capacity:** when the link is idle, nothing is held back or dropped. All traffic gets through.
+
+### Where it is in the code
+
+| File | What it does |
+|---|---|
+| `qos.py` → `enqueue()` | Puts each packet in its class queue; drops non-essential packets under congestion |
+| `qos.py` → `_head()` | Picks the most important waiting packet and applies the critical-bandwidth reserve |
+| `qos.py` → `dequeue()` | Sends the packet once the link has enough capacity (token bucket) |
+| `edge_gateway.py` → `forwarder()` | Loop that sends scheduled packets to the server |
+
+### Try it
+
+```bash
+# With QoS (critical data first)
+python run_demo.py --backbone-bps 1000
+
+# Without QoS (first come, first served), for comparison
+python run_demo.py --backbone-bps 1000 --scheduler fifo
+```
+
+Open http://127.0.0.1:8000 and check the **Gateway QoS** table: with QoS, CRITICAL packets wait well under a second, while with `fifo` they wait as long as everything else.
+
+### Results
+
+Offered load: 1510 B/s (4 buoys + satellite station + housekeeping). Full tables are in `results/REPORT.md`.
+
+| Link capacity | Scheduler | Critical packets delivered | 95% of critical packets arrive within |
+|---|---|---|---|
+| 1000 B/s | FIFO (no QoS) | 77.3 % | 65.8 s |
+| 1000 B/s | **QoS** | **100 %** | **0.41 s** |
+| 1200 B/s | FIFO (no QoS) | 100 % | 49.0 s |
+| 1200 B/s | **QoS** | **100 %** | **0.36 s** |
+| 2000 B/s | FIFO / QoS | 100 % | 0 s (link not congested) |
+
 ## Project Files
 
 **Core pipeline**
