@@ -386,7 +386,7 @@ def r1_laksh():
                   "Working prototype demonstrated at Review 2"]])
     video(d, VID1, "R1", "laksh")
     rf.write(d)
-    finish(d, f"{reg}_LakshAhuja_R1_Report")
+    finish(d, "LakshAhuja_R1")
 
 
 # ============================================================================ R1 ANVAY
@@ -481,7 +481,7 @@ def r1_anvay():
                   "server; literature study for the ML classifier", "Gateway shown in the Review 2 demo"]])
     video(d, VID1, "R1", "anvay")
     rf.write(d)
-    finish(d, f"{reg}_AnvaySharma_R1_Report")
+    finish(d, "AnvaySharma_R1")
 
 
 # ============================================================================ R1 SREEHARI
@@ -575,7 +575,7 @@ def r1_sreehari():
                   "Review 2; component list ready"]])
     video(d, VID1, "R1", "sreehari")
     rf.write(d)
-    finish(d, f"{reg}_Sreehari_R1_Report")
+    finish(d, "Sreehari_R1")
 
 
 # ============================================================================ R2 shared helpers
@@ -705,7 +705,7 @@ def r2_laksh():
                "Logs: `server.log`, `api.log` and `crash_srv.log` in `docs/reports/evidence/r2_prototype/`."])
     contrib_placeholder(d, "laksh")
     video(d, VID2, "R2", "laksh")
-    finish(d, f"{reg}_LakshAhuja_R2_Report")
+    finish(d, "LakshAhuja_R2")
 
 
 # ============================================================================ R2 ANVAY
@@ -809,7 +809,7 @@ def r2_anvay():
                "Logs: `gateway.log` and `crash_gw.log` in `docs/reports/evidence/r2_prototype/`."])
     contrib_placeholder(d, "anvay")
     video(d, VID2, "R2", "anvay")
-    finish(d, f"{reg}_AnvaySharma_R2_Report")
+    finish(d, "AnvaySharma_R2")
 
 
 # ============================================================================ R2 SREEHARI
@@ -920,7 +920,7 @@ def r2_sreehari():
                "Logs: `buoy_07.log`, `buoy_12.log`, `radar.log` and `server.log` in `docs/reports/evidence/r2_prototype/`."])
     contrib_placeholder(d, "sreehari")
     video(d, VID2, "R2", "sreehari")
-    finish(d, f"{reg}_Sreehari_R2_Report")
+    finish(d, "Sreehari_R2")
 
 
 if __name__ == "__main__":
