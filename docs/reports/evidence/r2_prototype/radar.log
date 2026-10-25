@@ -1,0 +1,62 @@
+[RADAR_COAST_A] sensor started -> sending to 127.0.0.1:9001
+[RADAR_COAST_A] seq=00001 wind= 14.59 pressure=1008.19 sent
+[RADAR_COAST_A] seq=00002 wind= 13.92 pressure=1008.00 sent
+[RADAR_COAST_A] seq=00003 wind= 13.56 pressure=1008.26 sent
+[RADAR_COAST_A] seq=00004 wind= 13.31 pressure=1008.13 sent
+[RADAR_COAST_A] seq=00005 wind= 13.84 pressure=1007.69 sent
+[RADAR_COAST_A] seq=00006 wind= 13.55 pressure=1007.83 sent
+[RADAR_COAST_A] seq=00007 wind= 14.16 pressure=1007.60 sent
+[RADAR_COAST_A] seq=00008 wind= 13.28 pressure=1007.56 sent
+[RADAR_COAST_A] seq=00009 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00010 wind= 13.99 pressure=1008.26 sent
+[RADAR_COAST_A] seq=00011 wind= 14.88 pressure=1008.63 sent
+[RADAR_COAST_A] seq=00012 wind= 14.69 pressure=1009.03 sent
+[RADAR_COAST_A] seq=00013 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00014 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00015 wind= 15.55 pressure=1008.41 sent
+[RADAR_COAST_A] seq=00016 wind= 14.63 pressure=1008.03 sent
+[RADAR_COAST_A] seq=00017 wind= 15.06 pressure=1008.09 sent
+[RADAR_COAST_A] seq=00018 wind= 14.52 pressure=1008.09 sent
+[RADAR_COAST_A] seq=00019 wind= 13.57 pressure=1007.60 sent
+[RADAR_COAST_A] seq=00020 wind= 13.99 pressure=1007.65 sent
+[RADAR_COAST_A] seq=00021 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00022 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00023 wind= 14.04 pressure=1007.38 sent
+[RADAR_COAST_A] seq=00024 wind= 14.36 pressure=1007.54 sent
+[RADAR_COAST_A] seq=00025 wind= 14.14 pressure=1007.75 sent
+[RADAR_COAST_A] seq=00026 wind= 16.19 pressure=1006.87 sent
+[RADAR_COAST_A] seq=00027 wind= 18.59 pressure=1005.86 sent
+[RADAR_COAST_A] seq=00028 wind= 20.28 pressure=1004.50 sent
+[RADAR_COAST_A] seq=00029 wind= 22.95 pressure=1003.03 sent
+[RADAR_COAST_A] seq=00030 wind= 24.59 pressure=1002.59 sent
+[RADAR_COAST_A] seq=00031 wind= 27.13 pressure=1001.56 sent
+[RADAR_COAST_A] seq=00032 wind= 27.96 pressure=1001.03 sent
+[RADAR_COAST_A] seq=00033 wind= 30.51 pressure= 999.99 sent
+[RADAR_COAST_A] seq=00034 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00035 wind= 33.08 pressure= 998.66 sent
+[RADAR_COAST_A] seq=00036 wind= 35.62 pressure= 997.18 sent
+[RADAR_COAST_A] seq=00037 wind= 37.97 pressure= 996.43 sent
+[RADAR_COAST_A] seq=00038 wind= 39.51 pressure= 995.24 sent
+[RADAR_COAST_A] seq=00039 wind= 40.65 pressure= 994.49 sent
+[RADAR_COAST_A] seq=00040 wind= 41.23 pressure= 993.50 sent
+[RADAR_COAST_A] seq=00041 wind= 42.08 pressure= 992.04 sent
+[RADAR_COAST_A] seq=00042 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00043 wind= 45.98 pressure= 989.88 sent
+[RADAR_COAST_A] seq=00044 wind= 48.65 pressure= 989.67 sent
+[RADAR_COAST_A] seq=00045 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00046 wind= 51.94 pressure= 987.68 sent
+[RADAR_COAST_A] seq=00047 wind= 53.91 pressure= 986.98 sent
+[RADAR_COAST_A] seq=00048 wind= 55.68 pressure= 985.58 sent
+[RADAR_COAST_A] seq=00049 wind= 58.41 pressure= 984.26 sent
+[RADAR_COAST_A] seq=00050 wind= 61.02 pressure= 984.04 sent
+[RADAR_COAST_A] seq=00051 wind= 62.60 pressure= 982.96 sent
+[RADAR_COAST_A] seq=00052 wind= 64.74 pressure= 982.68 sent
+[RADAR_COAST_A] seq=00053 wind= 66.61 pressure= 982.27 sent
+[RADAR_COAST_A] seq=00054 wind= 68.57 pressure= 981.96 sent
+[RADAR_COAST_A] seq=00055 wind= 71.13 pressure= 981.03 sent
+[RADAR_COAST_A] seq=00056 wind= 73.45 pressure= 979.85 sent
+[RADAR_COAST_A] seq=00057 wind= 75.14 pressure= 979.14 sent
+[RADAR_COAST_A] seq=00058 wind= 75.91 pressure= 977.65 sent
+[RADAR_COAST_A] seq=00059 LOST (simulated link loss)
+[RADAR_COAST_A] seq=00060 wind= 80.32 pressure= 976.38 sent
+[RADAR_COAST_A] seq=00061 wind= 82.05 pressure= 976.00 sent

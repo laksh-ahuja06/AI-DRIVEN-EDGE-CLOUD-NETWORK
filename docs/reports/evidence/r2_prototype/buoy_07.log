@@ -1,0 +1,62 @@
+[BUOY_07] sensor started -> sending to 127.0.0.1:9001
+[BUOY_07] seq=00001 wind= 15.22 pressure=1007.82 sent
+[BUOY_07] seq=00002 wind= 14.75 pressure=1008.04 sent
+[BUOY_07] seq=00003 wind= 13.94 pressure=1008.21 sent
+[BUOY_07] seq=00004 wind= 14.28 pressure=1008.23 sent
+[BUOY_07] seq=00005 wind= 14.72 pressure=1008.06 sent
+[BUOY_07] seq=00006 wind= 14.89 pressure=1007.78 sent
+[BUOY_07] seq=00007 wind= 14.08 pressure=1008.18 sent
+[BUOY_07] seq=00008 wind= 13.63 pressure=1008.51 sent
+[BUOY_07] seq=00009 wind= 14.24 pressure=1008.90 sent
+[BUOY_07] seq=00010 wind= 14.04 pressure=1008.70 sent
+[BUOY_07] seq=00011 wind= 13.76 pressure=1008.72 sent
+[BUOY_07] seq=00012 wind= 12.80 pressure=1009.21 sent
+[BUOY_07] seq=00013 wind= 12.80 pressure=1009.00 sent
+[BUOY_07] seq=00014 wind= 12.27 pressure=1008.82 sent
+[BUOY_07] seq=00015 wind= 11.74 pressure=1008.51 sent
+[BUOY_07] seq=00016 wind= 14.35 pressure=1007.36 sent
+[BUOY_07] seq=00017 wind= 15.58 pressure=1006.85 sent
+[BUOY_07] seq=00018 LOST (simulated link loss)
+[BUOY_07] seq=00019 wind= 19.23 pressure=1005.36 sent
+[BUOY_07] seq=00020 wind= 21.69 pressure=1004.84 sent
+[BUOY_07] seq=00021 wind= 24.59 pressure=1004.21 sent
+[BUOY_07] seq=00022 wind= 25.79 pressure=1003.47 sent
+[BUOY_07] seq=00023 wind= 27.84 pressure=1002.65 sent
+[BUOY_07] seq=00024 wind= 28.81 pressure=1002.39 sent
+[BUOY_07] seq=00025 wind= 30.69 pressure=1001.08 sent
+[BUOY_07] seq=00026 wind= 31.33 pressure= 999.76 sent
+[BUOY_07] seq=00027 LOST (simulated link loss)
+[BUOY_07] seq=00028 wind= 32.97 pressure= 997.31 sent
+[BUOY_07] seq=00029 LOST (simulated link loss)
+[BUOY_07] seq=00030 wind= 36.42 pressure= 994.81 sent
+[BUOY_07] seq=00031 wind= 37.54 pressure= 994.59 sent
+[BUOY_07] seq=00032 wind= 39.60 pressure= 994.12 sent
+[BUOY_07] seq=00033 LOST (simulated link loss)
+[BUOY_07] seq=00034 wind= 41.69 pressure= 991.93 sent
+[BUOY_07] seq=00035 wind= 42.30 pressure= 990.91 sent
+[BUOY_07] seq=00036 wind= 44.08 pressure= 989.90 sent
+[BUOY_07] seq=00037 wind= 45.78 pressure= 989.36 sent
+[BUOY_07] seq=00038 wind= 46.93 pressure= 988.89 sent
+[BUOY_07] seq=00039 wind= 48.23 pressure= 988.65 sent
+[BUOY_07] seq=00040 wind= 50.59 pressure= 988.05 sent
+[BUOY_07] seq=00041 wind= 51.89 pressure= 987.02 sent
+[BUOY_07] seq=00042 wind= 53.50 pressure= 985.87 sent
+[BUOY_07] seq=00043 LOST (simulated link loss)
+[BUOY_07] seq=00044 wind= 57.47 pressure= 983.90 sent
+[BUOY_07] seq=00045 wind= 59.64 pressure= 983.03 sent
+[BUOY_07] seq=00046 wind= 61.39 pressure= 982.79 sent
+[BUOY_07] seq=00047 wind= 64.11 pressure= 982.56 sent
+[BUOY_07] seq=00048 wind= 66.24 pressure= 981.96 sent
+[BUOY_07] seq=00049 wind= 68.30 pressure= 981.53 sent
+[BUOY_07] seq=00050 wind= 69.78 pressure= 981.18 sent
+[BUOY_07] seq=00051 wind= 71.79 pressure= 980.29 sent
+[BUOY_07] seq=00052 wind= 73.37 pressure= 979.10 sent
+[BUOY_07] seq=00053 wind= 74.72 pressure= 978.81 sent
+[BUOY_07] seq=00054 LOST (simulated link loss)
+[BUOY_07] seq=00055 wind= 79.62 pressure= 977.66 sent
+[BUOY_07] seq=00056 wind= 81.00 pressure= 976.96 sent
+[BUOY_07] seq=00057 wind= 81.65 pressure= 975.95 sent
+[BUOY_07] seq=00058 wind= 84.30 pressure= 974.60 sent
+[BUOY_07] seq=00059 wind= 86.18 pressure= 974.07 sent
+[BUOY_07] seq=00060 wind= 89.07 pressure= 973.01 sent
+[BUOY_07] seq=00061 LOST (simulated link loss)

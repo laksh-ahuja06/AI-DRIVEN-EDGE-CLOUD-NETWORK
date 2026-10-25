@@ -1,0 +1,21 @@
+[server] listening for gateway traffic on 127.0.0.1:9002
+[server] RADAR_COAST_A: reconstructed 1 missing record(s) between seq 8 and 10
+[server] BUOY_12: reconstructed 1 missing record(s) between seq 8 and 10
+[server] RADAR_COAST_A: reconstructed 2 missing record(s) between seq 12 and 15
+[server] BUOY_12: reconstructed 1 missing record(s) between seq 14 and 16
+[server] BUOY_12: reconstructed 1 missing record(s) between seq 16 and 18
+[server] BUOY_07: reconstructed 1 missing record(s) between seq 17 and 19
+[server] RADAR_COAST_A: reconstructed 2 missing record(s) between seq 20 and 23
+[server] BUOY_07: reconstructed 1 missing record(s) between seq 26 and 28
+[server] BUOY_07: reconstructed 1 missing record(s) between seq 28 and 30
+[server] BUOY_12: reconstructed 1 missing record(s) between seq 30 and 32
+[server] BUOY_07: reconstructed 1 missing record(s) between seq 32 and 34
+[server] RADAR_COAST_A: reconstructed 1 missing record(s) between seq 33 and 35
+[server] BUOY_12: reconstructed 1 missing record(s) between seq 33 and 35
+[server] RADAR_COAST_A: reconstructed 1 missing record(s) between seq 41 and 43
+[server] BUOY_12: reconstructed 1 missing record(s) between seq 41 and 43
+[server] BUOY_07: reconstructed 1 missing record(s) between seq 42 and 44
+[server] RADAR_COAST_A: reconstructed 1 missing record(s) between seq 44 and 46
+[server] BUOY_12: reconstructed 1 missing record(s) between seq 50 and 52
+[server] BUOY_07: reconstructed 1 missing record(s) between seq 53 and 55
+[server] RADAR_COAST_A: reconstructed 1 missing record(s) between seq 58 and 60

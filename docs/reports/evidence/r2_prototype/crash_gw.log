@@ -1,0 +1,24 @@
+[gateway] listening for sensors on 127.0.0.1:9001
+Exception in thread Thread-1 (receiver):
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1044, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "/usr/lib/python3.13/threading.py", line 995, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user-AI-DRIVEN-EDGE-CLOUD-NETWORK/bc5d9137-f27f-5aac-8f90-1253ac78de75/scratchpad/r2proto/edge_gateway.py", line 51, in receiver
+    record = decode(data)
+  File "/tmp/claude-0/-home-user-AI-DRIVEN-EDGE-CLOUD-NETWORK/bc5d9137-f27f-5aac-8f90-1253ac78de75/scratchpad/r2proto/common.py", line 49, in decode
+    return json.loads(data.decode("utf-8"))
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)

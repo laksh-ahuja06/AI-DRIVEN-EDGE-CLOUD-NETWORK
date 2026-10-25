@@ -1,0 +1,8 @@
+== t=12s status: {"stats":{"received":36,"reconstructed":2,"critical":0},"nodes":["BUOY_07","RADAR_COAST_A","BUOY_12"]}
+== t=12s predict: {'overall_risk': 25.6, 'alert': False}
+== t=30s status: {"stats":{"received":81,"reconstructed":11,"critical":0},"nodes":["BUOY_07","RADAR_COAST_A","BUOY_12"]}
+== t=30s predict: {'overall_risk': 69.6, 'alert': True}
+== t=45s status: {"stats":{"received":118,"reconstructed":19,"critical":13},"nodes":["BUOY_07","RADAR_COAST_A","BUOY_12"]}
+== t=45s predict: {'overall_risk': 100.0, 'alert': True}
+== t=60s status: {"stats":{"received":160,"reconstructed":22,"critical":42},"nodes":["BUOY_07","RADAR_COAST_A","BUOY_12"]}
+== t=60s predict: {'overall_risk': 100.0, 'alert': True}
