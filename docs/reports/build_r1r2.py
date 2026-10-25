@@ -32,18 +32,64 @@ REFS.update({
     "bonomi": 'F. Bonomi, R. Milito, J. Zhu, and S. Addepalli, "Fog computing and its role in the Internet of Things," in *Proc. MCC Workshop on Mobile Cloud Computing*, 2012, pp. 13–16.',
     "xgb": 'T. Chen and C. Guestrin, "XGBoost: A scalable tree boosting system," in *Proc. ACM KDD*, 2016, pp. 785–794.',
     "jouhari": 'M. Jouhari, K. Ibrahimi, H. Tembine, and J. Ben-Othman, "Underwater wireless sensor networks: A survey on enabling technologies, localization protocols, and Internet of Underwater Things," *IEEE Access*, vol. 7, pp. 96879–96899, 2019.',
+    # recent literature (2018 onwards) used in the R1 survey tables
+    "yu18": 'W. Yu, F. Liang, X. He, W. G. Hatcher, C. Lu, J. Lin, and X. Yang, "A survey on the edge computing for the Internet of Things," *IEEE Access*, vol. 6, pp. 6900–6919, 2018.',
+    "abbas18": 'N. Abbas, Y. Zhang, A. Taherkordi, and T. Skeie, "Mobile edge computing: A survey," *IEEE Internet of Things Journal*, vol. 5, no. 1, pp. 450–465, 2018.',
+    "hassan18": 'N. Hassan, S. Gillani, E. Ahmed, I. Yaqoob, and M. Imran, "The role of edge computing in Internet of Things," *IEEE Communications Magazine*, vol. 56, no. 11, pp. 110–115, 2018.',
+    "pham20": 'Q.-V. Pham, F. Fang, V. N. Ha, M. J. Piran, M. Le, L. B. Le, W.-J. Hwang, and Z. Ding, "A survey of multi-access edge computing in 5G and beyond: Fundamentals, technology integration, and state-of-the-art," *IEEE Access*, vol. 8, pp. 116974–117017, 2020.',
+    "zhou19": 'Z. Zhou, X. Chen, E. Li, L. Zeng, K. Luo, and J. Zhang, "Edge intelligence: Paving the last mile of artificial intelligence with edge computing," *Proceedings of the IEEE*, vol. 107, no. 8, pp. 1738–1762, 2019.',
+    "esposito22": 'M. Esposito, L. Palma, A. Belli, L. Sabbatini, and P. Pierleoni, "Recent advances in Internet of Things solutions for early warning systems: A review," *Sensors*, vol. 22, no. 6, art. 2124, 2022.',
+    "centenaro21": 'M. Centenaro, C. E. Costa, F. Granelli, C. Sacchi, and L. Vangelista, "A survey on technologies, standards and open challenges in satellite IoT," *IEEE Communications Surveys & Tutorials*, vol. 23, no. 3, pp. 1693–1720, 2021.',
+    "kodheli21": 'O. Kodheli *et al.*, "Satellite communications in the new space era: A survey and future challenges," *IEEE Communications Surveys & Tutorials*, vol. 23, no. 1, pp. 70–109, 2021.',
+    "bennis18": 'M. Bennis, M. Debbah, and H. V. Poor, "Ultrareliable and low-latency wireless communication: Tail, risk, and scale," *Proceedings of the IEEE*, vol. 106, no. 10, pp. 1834–1853, 2018.',
+    "popovski18": 'P. Popovski, J. J. Nielsen, C. Stefanovic, E. de Carvalho, E. Ström, K. F. Trillingsgaard, A.-S. Bana, D. M. Kim, R. Kotaba, J. Park, and R. B. Sørensen, "Wireless access for ultra-reliable low-latency communication: Principles and building blocks," *IEEE Network*, vol. 32, no. 2, pp. 16–23, 2018.',
+    "yates21": 'R. D. Yates, Y. Sun, D. R. Brown, S. K. Kaul, E. Modiano, and S. Ulukus, "Age of information: An introduction and survey," *IEEE Journal on Selected Areas in Communications*, vol. 39, no. 5, pp. 1183–1210, 2021.',
+    "fuller20": 'A. Fuller, Z. Fan, C. Day, and C. Barlow, "Digital twin: Enabling technologies, challenges and open research," *IEEE Access*, vol. 8, pp. 108952–108971, 2020.',
+    "chavas22": 'D. R. Chavas and J. A. Knaff, "A simple model for predicting the tropical cyclone radius of maximum wind from outer size," *Weather and Forecasting*, vol. 37, no. 5, pp. 563–579, 2022.',
+    "adt19": 'T. L. Olander and C. S. Velden, "The Advanced Dvorak Technique (ADT) for estimating tropical cyclone intensity: Update and new capabilities," *Weather and Forecasting*, vol. 34, no. 4, pp. 905–922, 2019.',
+    "wimmers19": 'A. Wimmers, C. Velden, and J. H. Cossuth, "Using deep learning to estimate tropical cyclone intensity from satellite passive microwave imagery," *Monthly Weather Review*, vol. 147, no. 6, pp. 2261–2282, 2019.',
+    "ruttgers19": 'M. Rüttgers, S. Lee, S. Jeon, and D. You, "Prediction of a typhoon track using a generative adversarial network and satellite images," *Scientific Reports*, vol. 9, art. 6057, 2019.',
+    "chenran19": 'J. Chen and X. Ran, "Deep learning with edge computing: A review," *Proceedings of the IEEE*, vol. 107, no. 8, pp. 1655–1674, 2019.',
+    "wang20": 'X. Wang, Y. Han, V. C. M. Leung, D. Niyato, X. Yan, and X. Chen, "Convergence of edge computing and deep learning: A comprehensive survey," *IEEE Communications Surveys & Tutorials*, vol. 22, no. 2, pp. 869–904, 2020.',
+    "ray22": 'P. P. Ray, "A review on TinyML: State-of-the-art and prospects," *Journal of King Saud University – Computer and Information Sciences*, vol. 34, no. 4, pp. 1595–1623, 2022.',
+    "banbury21": 'C. Banbury *et al.*, "MLPerf Tiny benchmark," in *Proc. NeurIPS Datasets and Benchmarks Track*, 2021.',
+    "vanhoudt20": 'G. Van Houdt, C. Mosquera, and G. Nápoles, "A review on the long short-term memory model," *Artificial Intelligence Review*, vol. 53, no. 8, pp. 5929–5955, 2020.',
+    "rudin19": 'C. Rudin, "Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead," *Nature Machine Intelligence*, vol. 1, pp. 206–215, 2019.',
+    "grinsztajn22": 'L. Grinsztajn, E. Oyallon, and G. Varoquaux, "Why do tree-based models still outperform deep learning on typical tabular data?" in *Proc. NeurIPS Datasets and Benchmarks Track*, 2022.',
+    "haxhibeqiri18": 'J. Haxhibeqiri, E. De Poorter, I. Moerman, and J. Hoebeke, "A survey of LoRaWAN for IoT: From technology to application," *Sensors*, vol. 18, no. 11, art. 3995, 2018.',
+    "mekki19": 'K. Mekki, E. Bajic, F. Chaxel, and F. Meyer, "A comparative study of LPWAN technologies for large-scale IoT deployment," *ICT Express*, vol. 5, no. 1, pp. 1–7, 2019.',
+    "parri21": 'L. Parri, S. Parrino, G. Peruzzi, and A. Pozzebon, "Offshore LoRaWAN networking: Transmission performances analysis under different environmental conditions," *IEEE Trans. Instrumentation and Measurement*, vol. 70, 2021.',
+    "babiuch19": 'M. Babiuch, P. Foltýnek, and P. Smutný, "Using the ESP32 microcontroller for data processing," in *Proc. 20th Int. Carpathian Control Conference (ICCC)*, 2019, pp. 1–6.',
+    "csdi21": 'Y. Tashiro, J. Song, Y. Song, and S. Ermon, "CSDI: Conditional score-based diffusion models for probabilistic time series imputation," in *Proc. NeurIPS*, 2021.',
+    "saits23": 'W. Du, D. Cote, and Y. Liu, "SAITS: Self-attention-based imputation for time series," *Expert Systems with Applications*, vol. 219, art. 119619, 2023.',
 })
 
-ROLES = [["Member", "Role", "Specific tasks (R1 → R3)"],
-         ["Laksh Ahuja (24BDS0212)", "Central server, dashboard & network QoS",
-          "Prediction server and REST API, live dashboard, priority scheduling on the slow link, cyclone simulation "
-          "model, demo launcher, automated testing"],
-         ["Anvay Sharma (24BCE0824)", "Edge gateway & edge intelligence",
-          "Gateway classification and forwarding, satellite image analysis at the edge, ML early-warning classifier, "
-          "LSTM implementation, evaluation and logs"],
-         ["Sreehari (24BDS0417)", "Sensing layer, hardware & data recovery",
-          "Sensor-node and satellite-station simulators, packet-loss model, reconstruction of lost readings, model "
-          "training data, ESP32 hardware nodes"]]
+ROLES = {
+    "laksh": [["Member", "Role", "How their work meets mine"],
+              ["Laksh Ahuja (24BDS0212) — me", "Central server, dashboard & network QoS",
+               "I own everything after the gateway: link scheduling, the prediction server and its API, the "
+               "dashboard, the cyclone scenario used in demos, and the automated tests"],
+              ["Anvay Sharma (24BCE0824)", "Edge gateway & edge intelligence",
+               "His gateway labels each packet; my scheduler and server trust that label, so we agree the class "
+               "names and thresholds together"],
+              ["Sreehari (24BDS0417)", "Sensing layer, hardware & data recovery",
+               "His nodes produce the sequence numbers my server checks, and his gap-filling function runs "
+               "inside my server"]],
+    "anvay": [["Member", "Responsibility", "Interface with the gateway (my module)"],
+              ["Anvay Sharma (24BCE0824) — me", "Edge gateway, classification, satellite analysis, ML models",
+               "Receive, check and label every packet; decide what leaves the edge first; shrink satellite data"],
+              ["Sreehari (24BDS0417)", "Sensor and satellite simulators, hardware nodes, gap recovery",
+               "Upstream of me: sends JSON readings to my UDP port 9001"],
+              ["Laksh Ahuja (24BDS0212)", "Prediction server, dashboard, link QoS, testing",
+               "Downstream of me: my forwarder sends to his server on UDP port 9002"]],
+    "sreehari": [["Team member", "Area", "What I hand over / receive"],
+                 ["Sreehari (24BDS0417) — me", "Sensors, satellite station, ESP32 nodes, recovery of lost readings",
+                  "I define the reading format and the loss behaviour, and supply the gap-filling method"],
+                 ["Anvay Sharma (24BCE0824)", "Gateway and edge AI",
+                  "Receives my packets first; needs my thresholds-crossing scenarios to test his classifier"],
+                 ["Laksh Ahuja (24BDS0212)", "Server, dashboard, QoS",
+                  "Calls my reconstruction code when his server sees a missing sequence number"]],
+}
 
 
 def cover(d, name, reg, review, date, role, summary):
@@ -60,14 +106,9 @@ def cover(d, name, reg, review, date, role, summary):
     d.page_break()
 
 
-def evidence_table(d, rf, angle):
-    rows = [["Source", "Published fact", "Why it matters for my part"],
-            [f"India Meteorological Department {rf('imd')}", "India has a coastline of about 7,500 km; the 1999 Odisha "
-             "super cyclone caused about 10,000 deaths.", angle[0]],
-            [f"WMO Atlas 1970–2019 {rf('wmo')}", "Tropical cyclones are among the leading causes of human and economic "
-             "losses from weather, climate and water extremes.", angle[1]],
-            ["Engineering estimate (our calculation)", angle[2][0], angle[2][1]]]
-    d.table(rows, [4.0, 6.5, 6.5], "Evidence that the problem is real")
+def evidence_table(d, rows):
+    d.table([["Source", "Published fact / figure", "Why it matters for my part"]] + rows, [4.0, 6.5, 6.5],
+            "Evidence that the problem is real")
 
 
 def timeline(d, weeks):
@@ -75,10 +116,19 @@ def timeline(d, weeks):
             "My weekly plan from Review 1 to Review 2")
 
 
-def contrib_placeholder(d):
-    d.note("[Insert here: screenshot of my own commits / work log and a photo or screen recording of me testing. "
-           "Note: the team's early commits were pushed from one shared GitHub account, so the file-level split "
-           "above is the record of who wrote what.]")
+PLACEHOLDER = {
+    "laksh": "[Insert: dated screenshot of my terminal running central_server.py with /predict open in the browser, "
+             "and my GitHub commit list. Our early commits went through one shared account, so the file split above "
+             "is the record of who wrote what.]",
+    "anvay": "[Insert: dated screenshot of edge_gateway.py printing CRITICAL / NORMAL lines while I test it, plus a "
+             "photo of me at the laptop during the test. Commits from my own GitHub account will be added from R3.]",
+    "sreehari": "[Insert: dated screenshot of three sensor_node.py terminals showing LOST lines, and the hardware "
+                "parts list or shop quotation. My later commits will be pushed from my own GitHub account.]",
+}
+
+
+def contrib_placeholder(d, who):
+    d.note(PLACEHOLDER[who])
 
 
 # ============================================================================ extra per-person sections
@@ -191,9 +241,9 @@ def risks(d, who):
     d.table([["Risk", "Likelihood", "Impact", "Mitigation"]] + RISKS[who], [5.6, 2.2, 2.0, 7.2], "Risk register for my part")
 
 
-def video(d, items, review):
+def video(d, items, review, who):
     d.h(f"{review} Video Plan", 2, numbered=False)
-    d.table([["Segment", "What I show"]] + [[a, "Face + screen; " + b] for a, b in zip(items, VIDEO_SHOW[review])],
+    d.table([["Segment", "What I show"]] + [[a, "Face + screen; " + b] for a, b in zip(items, VIDEO_SHOW[review][who])],
             [6.0, 11.0])
 
 
@@ -207,10 +257,22 @@ def plan3(d, who):
 
 
 VIDEO_SHOW = {
-    "R1": ["IMD / WMO evidence and the problem statement", "literature table and the gap", "block diagram and feasibility table",
-           "role table and weekly plan"],
-    "R2": ["flowchart and parameter table", "code running and the logs", "the problem table and the evidence log",
-           "cost table and the division-of-work table"],
+    "R1": {"laksh": ["the IMD coastline / Odisha figures and my 2.1 MB-frame calculation",
+                     "my 15-paper table and the gap between network priority and cyclone risk",
+                     "the block diagram with my server, dashboard and QoS blocks", "my weekly plan"],
+           "anvay": ["the WMO loss figures and why late detection is costly",
+                     "papers on satellite intensity estimation and edge AI; the edge gap",
+                     "the gateway and edge-analysis blocks I will build", "my three-week gateway plan"],
+           "sreehari": ["the offshore LoRaWAN measurements and burst-loss evidence",
+                        "imputation and LPWAN papers; why offline imputation is not enough",
+                        "the sensing and recovery blocks; the ESP32 cost estimate", "my sensor-to-hardware timeline"]},
+    "R2": {"laksh": ["the architecture and my server flowchart", "server + API running, /predict in the browser",
+                     "the startup-race fix and the malformed-packet crash", "my cost table and division of work"],
+           "anvay": ["the architecture and my gateway flowchart", "gateway log classifying packets live",
+                     "the crash on bad input and the 0.5 s throttle problem", "comparison table and division of work"],
+           "sreehari": ["the architecture, my sensor flowchart and the circuit diagram",
+                        "three nodes running with LOST lines; filled gaps in /status",
+                        "scattered losses and the wrong-timestamp bug", "hardware cost table and division of work"]},
 }
 
 
@@ -233,8 +295,8 @@ def newdoc(reg, name, review, fname):
 # ============================================================================ R1 LAKSH
 def r1_laksh():
     name, reg = TEAM[0]
-    rf = Refs(["imd", "wmo", "shi", "satya", "mao", "bonomi", "alfuqaha", "xu", "diffserv", "red", "drr", "mininet",
-               "mqtt", "holland", "pradhan", "grud", "chenr"])
+    rf = Refs(["imd", "esposito22", "yu18", "abbas18", "hassan18", "pham20", "zhou19", "xu", "centenaro21",
+               "kodheli21", "bennis18", "popovski18", "yates21", "fuller20", "chenr", "chavas22", "holland", "diffserv"])
     d = newdoc(reg, name, "R1", f"{reg}_LakshAhuja_R1")
     cover(d, name, reg, "Review 1 — Problem Identification & Proposal", "24/8/2026",
           "Central server, dashboard, network QoS, cyclone simulation and testing",
@@ -251,37 +313,47 @@ def r1_laksh():
                "**Who is affected:** coastal and island communities and fishers on India's east coast, and the "
                "district disaster-management officials who order evacuations.",
                "**If unsolved:** a monitoring network treats a routine battery report and a falling-pressure alarm "
-               "equally; under congestion, critical readings queue behind unimportant data, and gaps from packet "
-               "loss leave the dashboard blank or wrong during the critical hours."])
+               "equally. One 2.1 MB satellite frame occupies a 9.6 kbps backhaul for about **29 minutes**; any alarm "
+               "queued behind it waits that long, and gaps from packet loss leave the dashboard blank or wrong during "
+               "the critical hours."])
     objectives(d, "laksh")
     d.h("Evidence the Problem is Real")
-    evidence_table(d, rf, ["A large exposed population depends on timely data from coastal sensors.",
-                           "The cost of a late warning is measured in lives and livelihoods.",
-                           ("One 4-band, 16-bit satellite frame of 512 × 512 pixels is about 2.1 MB; on a 9.6 kbps "
-                            "satellite backhaul that alone would take roughly half an hour to send.",
-                            "Shows why the network must decide what to send first — the core of my QoS work.")])
+    evidence_table(d, [
+        [f"India Meteorological Department {rf('imd')}", "India has a coastline of about 7,500 km; the 1999 Odisha "
+         "super cyclone killed about 10,000 people.", "The people at risk depend on coastal data reaching the "
+         "warning centre on time."],
+        [f"Esposito et al., 2022 {rf('esposito22')}", "Review of IoT early-warning systems: finds gaps in the "
+         "literature and recommends adding a fog/edge layer to warning architectures.", "Supports making decisions "
+         "near the data while a central server keeps the overall picture."],
+        ["Engineering estimate (our calculation)", "4 bands × 512 × 512 pixels × 2 bytes = 2,097,152 bytes; at "
+         "9,600 bit/s: 2,097,152 × 8 / 9,600 ≈ 1,748 s ≈ 29 min.", "Shows why the link must decide what to send "
+         "first — the core of my QoS work."]])
     d.h("Literature Survey")
     d.table([["#", "Author / Year", "Method used", "Result", "Limitation"],
-             ["1", f"Shi et al., 2016 {rf('shi')}", "Edge computing vision paper", "Defines edge tier, motivates local processing", "No concrete scheduling policy"],
-             ["2", f"Satyanarayanan, 2017 {rf('satya')}", "Cloudlet / edge architecture", "Lower latency and backhaul load", "General purpose; no disaster focus"],
-             ["3", f"Mao et al., 2017 {rf('mao')}", "Survey of mobile edge computing", "Taxonomy of offloading and resource allocation", "Cellular setting; not lossy marine links"],
-             ["4", f"Bonomi et al., 2012 {rf('bonomi')}", "Fog computing for IoT", "Argues for a layer between devices and cloud", "Position paper; no evaluation"],
-             ["5", f"Al-Fuqaha et al., 2015 {rf('alfuqaha')}", "IoT protocol survey", "Compares MQTT, CoAP and others", "No prioritisation by event severity"],
-             ["6", f"Xu et al., 2019 {rf('xu')}", "Review of marine IoT monitoring", "Catalogues ocean sensing systems", "Little on congestion or data gaps"],
-             ["7", f"Blake et al., 1998 {rf('diffserv')}", "DiffServ class-based QoS", "Scalable per-hop priority", "Classes fixed in advance"],
-             ["8", f"Floyd & Jacobson, 1993 {rf('red')}", "Random early detection", "Keeps queues short", "Drops are blind to importance"],
-             ["9", f"Shreedhar & Varghese, 1996 {rf('drr')}", "Deficit round-robin", "Fair sharing in O(1)", "Fairness, not urgency"],
-             ["10", f"Lantz et al., 2010 {rf('mininet')}", "Mininet emulation", "Realistic networks on one laptop", "Tool only"],
-             ["11", f"Banks & Gupta, 2014 {rf('mqtt')}", "MQTT 3.1.1 standard", "Lightweight publish/subscribe", "QoS levels about delivery, not urgency"],
-             ["12", f"Holland, 1980 {rf('holland')}", "Analytic hurricane wind/pressure profile", "Standard parametric storm model", "Not a monitoring system"],
-             ["13", f"Pradhan et al., 2018 {rf('pradhan')}", "CNN on satellite images", "Automatic intensity estimation", "Central, compute-heavy"],
-             ["14", f"Che et al., 2018 {rf('grud')}", "RNN for series with missing values", "Better predictions despite gaps", "Offline; not a live server"],
-             ["15", f"Chen et al., 2020 {rf('chenr')}", "Review of ML for cyclone forecasting", "Surveys ML forecast models", "Focus on models, not data delivery"]],
-            [0.7, 3.4, 4.2, 4.4, 4.3], "Literature survey (15 articles)")
-    d.p("**Gap:** networking work (DiffServ, RED, DRR) prioritises traffic by fixed rules, edge papers stay at the "
-        "level of vision, and cyclone ML work assumes the data has already arrived. No work we found ties network "
-        "priority to the *live* cyclone risk computed at the server, while also repairing missing readings and "
-        "showing what was estimated. My part of the project targets exactly this link between risk and the network.")
+             ["1", f"Yu et al., 2018 {rf('yu18')}", "Survey of edge computing for IoT", "Edge cuts latency and backhaul load", "No priority by event severity"],
+             ["2", f"Abbas et al., 2018 {rf('abbas18')}", "Mobile edge computing survey", "Architectures and offloading", "Assumes reliable cellular links"],
+             ["3", f"Hassan et al., 2018 {rf('hassan18')}", "Taxonomy of edge paradigms for IoT", "Requirements and open issues", "No evaluation under loss"],
+             ["4", f"Pham et al., 2020 {rf('pham20')}", "MEC in 5G and beyond survey", "Resource allocation methods", "5G setting, not marine links"],
+             ["5", f"Zhou et al., 2019 {rf('zhou19')}", "Edge intelligence overview", "AI split across device, edge, cloud", "Generic; no disaster case"],
+             ["6", f"Esposito et al., 2022 {rf('esposito22')}", "Review of IoT early-warning systems", "Edge/fog layer recommended", "Floods, quakes; not cyclones"],
+             ["7", f"Xu et al., 2019 {rf('xu')}", "Review of marine IoT monitoring", "Catalogues ocean sensing systems", "Little on congestion or gaps"],
+             ["8", f"Centenaro et al., 2021 {rf('centenaro21')}", "Satellite IoT survey", "LEO links for remote sensors", "Low data rates; no scheduling"],
+             ["9", f"Kodheli et al., 2021 {rf('kodheli21')}", "Survey of satellite communications", "Backhaul options and limits", "Not application-aware"],
+             ["10", f"Bennis et al., 2018 {rf('bennis18')}", "URLLC: tail latency and risk", "Design for worst case, not average", "Theory; 5G radio focus"],
+             ["11", f"Popovski et al., 2018 {rf('popovski18')}", "Building blocks for URLLC", "Reserve resources for urgent data", "Needs 5G infrastructure"],
+             ["12", f"Yates et al., 2021 {rf('yates21')}", "Age of information survey", "Freshness metric for status updates", "Not tied to risk level"],
+             ["13", f"Fuller et al., 2020 {rf('fuller20')}", "Digital twin review", "Live model mirrored from sensors", "Assumes complete data"],
+             ["14", f"Chen et al., 2020 {rf('chenr')}", "Review of ML for cyclone forecasting", "Surveys ML forecast models", "Assumes data already arrived"],
+             ["15", f"Chavas & Knaff, 2022 {rf('chavas22')}", "Simple model of storm wind radius", "Realistic wind structure in < 1 s", "Model only, no network"]],
+            [0.7, 3.6, 4.1, 4.3, 4.3], "Literature survey (15 articles, 2018–2022)")
+    d.p("**Gap:** edge and MEC surveys move computing closer to the data but do not rank traffic by event "
+        "severity; URLLC and age-of-information work shows how to protect urgent, fresh data, but on 5G "
+        "infrastructure that coastal buoys do not have; and cyclone ML work assumes the data has already arrived. "
+        "No work we found ties link priority to the *live* cyclone risk computed at the server, while also repairing "
+        "missing readings and showing what was estimated. My part targets exactly this link between risk and the "
+        "network.")
+    d.p(f"*Foundational methods we also build on (not counted in the 15):* the Holland storm profile {rf('holland')} "
+        f"and DiffServ class-based forwarding {rf('diffserv')}.")
     d.h("Proposed Solution Form")
     d.p("**Form: coding and modelling.** We will build the system as software — simulated sensor nodes, an edge "
         "gateway and a central server — plus a network topology in Cisco Packet Tracer. Fabrication or a product "
@@ -303,7 +375,7 @@ def r1_laksh():
             [4.0, 13.0], "Feasibility of my part")
     risks(d, "laksh")
     d.h("Team Role Split and Timeline to Review 2")
-    d.table(ROLES, [4.2, 4.4, 8.4], "Team role split")
+    d.table(ROLES["laksh"], [4.2, 4.4, 8.4], "Team role split and interfaces")
     d.p("**My role** is distinct: everything from the moment a packet leaves the gateway — scheduling, the server, "
         "the dashboard — plus the simulation and tests that prove it works.")
     timeline(d, [["1", "25–31 Aug", "Agree the telemetry record format with the team; build the Packet Tracer topology "
@@ -312,7 +384,7 @@ def r1_laksh():
                   "packets from the gateway"],
                  ["3", "8–14 Sep", "REST endpoints and first dashboard; end-to-end test with teammates' modules",
                   "Working prototype demonstrated at Review 2"]])
-    video(d, VID1, "R1")
+    video(d, VID1, "R1", "laksh")
     rf.write(d)
     finish(d, f"{reg}_LakshAhuja_R1_Report")
 
@@ -320,8 +392,8 @@ def r1_laksh():
 # ============================================================================ R1 ANVAY
 def r1_anvay():
     name, reg = TEAM[1]
-    rf = Refs(["imd", "wmo", "dvorak", "velden", "adt", "pradhan", "chenb", "chenr", "denby", "phisat", "lstm",
-               "limz", "xgb", "shi", "mao", "coap", "diffserv"])
+    rf = Refs(["wmo", "chenb", "adt19", "pradhan", "wimmers19", "ruttgers19", "denby", "phisat", "chenran19", "wang20",
+               "ray22", "banbury21", "vanhoudt20", "limz", "rudin19", "grinsztajn22", "dvorak", "lstm"])
     d = newdoc(reg, name, "R1", f"{reg}_AnvaySharma_R1")
     cover(d, name, reg, "Review 1 — Problem Identification & Proposal", "24/8/2026",
           "Edge gateway and edge intelligence (classification, satellite image analysis, ML models)",
@@ -337,39 +409,46 @@ def r1_anvay():
                "evacuate.",
                "**Who is affected:** fishing communities and coastal residents, and meteorological and disaster "
                "agencies that depend on near-real-time data.",
-               "**If unsolved:** a threshold-only system gives zero warning before a threshold is crossed, and raw "
-               "images can saturate the link for many minutes."])
+               "**If unsolved:** a threshold-only system gives **0 s** of warning before a threshold is crossed, and "
+               "one raw 2 MB image saturates a 9.6 kbps link for about half an hour."])
     objectives(d, "anvay")
     d.h("Evidence the Problem is Real")
-    evidence_table(d, rf, ["The scale of exposure makes early warning valuable.",
-                           "Losses justify investing in faster, smarter edge decisions.",
-                           ("A 4-band 16-bit frame at 512 × 512 pixels is 2,097,152 bytes; lossless compression "
-                            "typically removes only a fraction of that for noisy imagery.",
-                            "Sending images unprocessed is not viable; edge analysis must cut data volume by orders "
-                            "of magnitude.")])
+    evidence_table(d, [
+        [f"WMO Atlas 1970–2019 {rf('wmo')}", "Storms caused about 577,000 deaths worldwide in 1970–2019 and were the "
+         "most common cause of economic damage among weather hazards.", "The cost of recognising danger late is very "
+         "high, so even minutes of extra warning matter."],
+        [f"Chen et al., 2019 {rf('chenb')}", "The Dvorak method is subjective and gives inconsistent estimates; their "
+         "CNN needed 1,097 storms of training data and reached an 8.39 kt error.", "Accurate image analysis exists "
+         "but is heavy and central; the edge needs a light version."],
+        ["Engineering estimate (our calculation)", "A 4-band 16-bit 512 × 512 frame is 2,097,152 bytes; a record of "
+         "about 200 bytes of storm features is roughly 10,000 times smaller.", "Sending features instead of images "
+         "is what makes satellite data usable on a slow link."]])
     d.h("Literature Survey")
     d.table([["#", "Author / Year", "Method used", "Result", "Limitation"],
-             ["1", f"Dvorak, 1975 {rf('dvorak')}", "Analyst reads cloud patterns in satellite images", "Global operational standard", "Subjective; needs experts"],
-             ["2", f"Velden et al., 2006 {rf('velden')}", "30-year review of the Dvorak technique", "Documents accuracy and pitfalls", "No automation for edge devices"],
-             ["3", f"Olander & Velden, 2007 {rf('adt')}", "Advanced Dvorak Technique (objective, IR)", "Automated intensity estimates", "Runs centrally on full images"],
-             ["4", f"Pradhan et al., 2018 {rf('pradhan')}", "Deep CNN on IR imagery", "Learned intensity estimation", "Needs GPU and large labelled data"],
-             ["5", f"Chen et al., 2019 {rf('chenb')}", "CNN using multi-channel satellite data", "Improved intensity estimates", "Heavy model; central processing"],
-             ["6", f"Chen et al., 2020 {rf('chenr')}", "Review of ML in cyclone forecasting", "Maps ML methods to forecast tasks", "No network or edge aspect"],
-             ["7", f"Denby & Lucia, 2020 {rf('denby')}", "Orbital edge computing on nanosatellites", "Process imagery where it is captured", "Space segment, not ground stations"],
-             ["8", f"Giuffrida et al., 2022 {rf('phisat')}", "On-board DNN filters cloudy images (Φ-Sat-1)", "Saves downlink by discarding useless data", "Cloud screening only, not storm features"],
-             ["9", f"Hochreiter & Schmidhuber, 1997 {rf('lstm')}", "LSTM recurrent network", "Learns long time dependencies", "Generic; needs a framework"],
-             ["10", f"Lim & Zohren, 2021 {rf('limz')}", "Survey of deep time-series forecasting", "Compares RNN, attention, hybrids", "Not edge-constrained"],
-             ["11", f"Chen & Guestrin, 2016 {rf('xgb')}", "Gradient-boosted trees (XGBoost)", "Strong tabular classifier", "Less transparent than linear models"],
-             ["12", f"Shi et al., 2016 {rf('shi')}", "Edge computing vision", "Motivates edge analytics", "No algorithms"],
-             ["13", f"Mao et al., 2017 {rf('mao')}", "Mobile edge computing survey", "Offloading decisions at the edge", "Cellular focus"],
-             ["14", f"Shelby et al., 2014 {rf('coap')}", "CoAP protocol", "Compact messages for constrained devices", "No content-aware priority"],
-             ["15", f"Blake et al., 1998 {rf('diffserv')}", "DiffServ traffic classes", "Class-based forwarding", "Static classification"]],
-            [0.7, 3.4, 4.2, 4.4, 4.3], "Literature survey (15 articles)")
-    d.p("**Gap:** image-based cyclone analysis (Dvorak, ADT, CNNs) runs centrally on full images, and on-board "
-        "satellite AI so far only screens out cloudy frames. Network classification uses fixed rules on current "
-        "values. Nobody we found extracts storm features at the *ground station* and sends only those, or uses the "
+             ["1", f"Olander & Velden, 2019 {rf('adt19')}", "Advanced Dvorak Technique update", "Objective intensity from IR images", "Runs centrally on full images"],
+             ["2", f"Pradhan et al., 2018 {rf('pradhan')}", "Deep CNN on IR imagery", "Learned intensity estimation", "Needs GPU and labelled data"],
+             ["3", f"Chen et al., 2019 {rf('chenb')}", "CNN on IR + microwave channels", "8.39 kt error on 2017 storms", "Heavy model; central"],
+             ["4", f"Wimmers et al., 2019 {rf('wimmers19')}", "Deep learning on passive microwave", "Intensity from microwave images", "Depends on polar passes"],
+             ["5", f"Rüttgers et al., 2019 {rf('ruttgers19')}", "GAN on satellite image sequences", "6-h track forecast, ≈96 km error", "Large training set; GPU"],
+             ["6", f"Denby & Lucia, 2020 {rf('denby')}", "Orbital edge computing", "Process imagery where captured", "Space segment, not ground"],
+             ["7", f"Giuffrida et al., 2022 {rf('phisat')}", "On-board DNN cloud screening", "Discards cloudy frames, saves downlink", "Cloud screening only"],
+             ["8", f"Chen & Ran, 2019 {rf('chenran19')}", "Review of deep learning at the edge", "Techniques to fit DL on edge devices", "Mostly video, not sensors"],
+             ["9", f"Wang et al., 2020 {rf('wang20')}", "Edge computing + DL survey", "Inference and training at the edge", "No disaster use case"],
+             ["10", f"Ray, 2022 {rf('ray22')}", "Review of TinyML", "ML on microcontrollers", "Tools still immature"],
+             ["11", f"Banbury et al., 2021 {rf('banbury21')}", "MLPerf Tiny benchmark", "Fair comparison of tiny models", "Benchmark, not application"],
+             ["12", f"Van Houdt et al., 2020 {rf('vanhoudt20')}", "Review of the LSTM model", "Formulation, training, uses", "Generic; framework-based"],
+             ["13", f"Lim & Zohren, 2021 {rf('limz')}", "Survey of deep time-series forecasting", "Compares RNN, attention, hybrids", "Not edge-constrained"],
+             ["14", f"Rudin, 2019 {rf('rudin19')}", "Case for interpretable models", "Simple models for high-stakes use", "Position paper"],
+             ["15", f"Grinsztajn et al., 2022 {rf('grinsztajn22')}", "Benchmark: trees vs DL on tables", "Simple models often win on tabular data", "No time-series focus"]],
+            [0.7, 3.7, 4.1, 4.3, 4.2], "Literature survey (15 articles, 2018–2022)")
+    d.p("**Gap:** image-based cyclone analysis (ADT, CNNs, GANs) runs centrally on full images, and on-board "
+        "satellite AI so far only screens out cloudy frames. Edge-AI reviews show how to fit models on small devices "
+        "but not for disaster telemetry, and interpretability work argues for simple models where lives are at "
+        "stake. Nobody we found extracts storm features at the *ground station* and sends only those, or uses the "
         "*trend* of a sensor's readings at the gateway to raise priority before a threshold is crossed. These two "
         "ideas are my contribution to the project.")
+    d.p(f"*Foundational methods we also build on (not counted in the 15):* the Dvorak cloud-pattern technique "
+        f"{rf('dvorak')} and the original LSTM {rf('lstm')}.")
     d.h("Proposed Solution Form")
     d.p("**Form: coding and modelling.** The edge gateway and the edge-AI functions are software by nature. We will "
         "first build a rule-based gateway (thresholds on wind and pressure) so the pipeline can be verified, then add "
@@ -391,7 +470,7 @@ def r1_anvay():
             [4.0, 13.0], "Feasibility of my part")
     risks(d, "anvay")
     d.h("Team Role Split and Timeline to Review 2")
-    d.table(ROLES, [4.2, 4.4, 8.4], "Team role split")
+    d.table(ROLES["anvay"], [4.2, 4.4, 8.4], "Team role split and interfaces")
     d.p("**My role** is the intelligence at the edge: the gateway that classifies and forwards each packet, and the "
         "models that let it recognise danger early and shrink satellite data.")
     timeline(d, [["1", "25–31 Aug", "Define CRITICAL / NORMAL classes and thresholds with the team; design the "
@@ -400,7 +479,7 @@ def r1_anvay():
                   "Gateway forwards packets in priority order"],
                  ["3", "8–14 Sep", "Alert mode (throttle normal traffic during an alert); integration with sensors and "
                   "server; literature study for the ML classifier", "Gateway shown in the Review 2 demo"]])
-    video(d, VID1, "R1")
+    video(d, VID1, "R1", "anvay")
     rf.write(d)
     finish(d, f"{reg}_AnvaySharma_R1_Report")
 
@@ -408,8 +487,8 @@ def r1_anvay():
 # ============================================================================ R1 SREEHARI
 def r1_sreehari():
     name, reg = TEAM[2]
-    rf = Refs(["imd", "wmo", "alfuqaha", "xu", "raza", "lora", "jouhari", "gilbert", "elliott", "grud", "brits",
-               "gain", "limz", "holland", "chenb", "denby", "coap"])
+    rf = Refs(["parri21", "mekki19", "haxhibeqiri18", "jouhari", "xu", "centenaro21", "esposito22", "babiuch19",
+               "wimmers19", "grud", "brits", "gain", "csdi21", "saits23", "limz", "gilbert", "elliott"])
     d = newdoc(reg, name, "R1", f"{reg}_Sreehari_R1")
     cover(d, name, reg, "Review 1 — Problem Identification & Proposal", "24/8/2026",
           "Sensing layer (sensor and satellite simulators, hardware nodes) and recovery of lost data",
@@ -424,36 +503,44 @@ def r1_sreehari():
                "**Who is affected:** forecasters who interpret the data, and coastal communities whose warnings depend "
                "on it.",
                "**If unsolved:** dashboards show missing or stale values during the storm, and models that need "
-               "continuous data cannot run."])
+               "continuous data cannot run. At one reading per second, a 10-minute outage leaves **600 readings** "
+               "missing from a single buoy."])
     objectives(d, "sreehari")
     d.h("Evidence the Problem is Real")
-    evidence_table(d, rf, ["Coastal sensing covers a long, exposed coastline.",
-                           "Data gaps during storms have real human cost.",
-                           ("Low-power long-range radio (LoRa) offers only about 0.3–50 kbps "
-                            f"{rf('raza')}; marine links also suffer correlated (bursty) loss {rf('gilbert')}.",
-                            "Sensor data must be compact and the receiver must cope with bursts of lost packets.")])
+    evidence_table(d, [
+        [f"Parri et al., 2021 {rf('parri21')}", "A real offshore LoRaWAN link from a buoy to coastal gateways 8.33 km "
+         "away was monitored for 70 days, and its signal quality was compared with the weather.", "Marine links work "
+         "but their quality changes with conditions, so loss must be expected."],
+        [f"Mekki et al., 2019 {rf('mekki19')}", "Low-power wide-area radios trade data rate for range; LoRa runs at "
+         "only about 0.3–50 kbps.", "Sensor messages must be small, and lost ones cannot simply be re-sent."],
+        ["Engineering estimate (our calculation)", "At 1 reading/s and 10 % loss, about 360 readings per hour are "
+         "lost per buoy; in bursts, several consecutive readings vanish together.", "The receiver must recover runs "
+         "of missing values, not just single ones."]])
     d.h("Literature Survey")
     d.table([["#", "Author / Year", "Method used", "Result", "Limitation"],
-             ["1", f"Al-Fuqaha et al., 2015 {rf('alfuqaha')}", "Survey of IoT technologies", "Protocols and architectures for sensors", "General, not marine"],
-             ["2", f"Xu et al., 2019 {rf('xu')}", "Review of marine IoT monitoring", "Ocean sensing platforms and links", "Data loss handling not addressed"],
-             ["3", f"Raza et al., 2017 {rf('raza')}", "LPWAN overview", "Range vs data rate trade-offs", "No recovery of lost data"],
-             ["4", f"Augustin et al., 2016 {rf('lora')}", "LoRa measurements", "Long range at low throughput", "Duty-cycle limits"],
-             ["5", f"Jouhari et al., 2019 {rf('jouhari')}", "Underwater sensor network survey", "Challenges of marine communication", "Underwater focus"],
-             ["6", f"Gilbert, 1960 {rf('gilbert')}", "Two-state burst-noise channel", "Models clustered errors", "Theory only"],
-             ["7", f"Elliott, 1963 {rf('elliott')}", "Error rates on burst channels", "Practical channel parameters", "Not for IoT telemetry"],
-             ["8", f"Che et al., 2018 {rf('grud')}", "GRU-D with missing-value decay", "Better results with gaps", "Offline clinical data"],
-             ["9", f"Cao et al., 2018 {rf('brits')}", "Bidirectional RNN imputation", "State-of-the-art gap filling", "Needs whole series; heavy"],
-             ["10", f"Yoon et al., 2018 {rf('gain')}", "GAN-based imputation (GAIN)", "Imputes without full data", "Complex to train"],
-             ["11", f"Lim & Zohren, 2021 {rf('limz')}", "Deep time-series forecasting survey", "Forecasting model families", "No real-time telemetry"],
-             ["12", f"Holland, 1980 {rf('holland')}", "Hurricane pressure profile", "Realistic storm pressure field", "Needs storm parameters"],
-             ["13", f"Chen et al., 2019 {rf('chenb')}", "CNN on satellite channels", "Intensity from imagery", "Large data and compute"],
-             ["14", f"Denby & Lucia, 2020 {rf('denby')}", "Orbital edge computing", "Process data where captured", "Space segment only"],
-             ["15", f"Shelby et al., 2014 {rf('coap')}", "CoAP for constrained devices", "Compact sensor messaging", "No gap recovery"]],
-            [0.7, 3.4, 4.2, 4.4, 4.3], "Literature survey (15 articles)")
-    d.p("**Gap:** imputation methods (GRU-D, BRITS, GAIN) work offline on complete datasets with heavy frameworks; "
-        "marine IoT reviews describe links but not recovery; burst-loss channel models are rarely used to test "
-        "sensor systems realistically. My part will generate realistic readings and loss, record the truth so "
-        "recovery can be measured, recover lost readings online, and design low-cost nodes that send the same data.")
+             ["1", f"Parri et al., 2021 {rf('parri21')}", "Offshore LoRaWAN field trial", "8.33 km buoy-to-shore link", "Single site; no data recovery"],
+             ["2", f"Mekki et al., 2019 {rf('mekki19')}", "Comparison of LPWAN technologies", "Range vs data-rate trade-offs", "No handling of lost data"],
+             ["3", f"Haxhibeqiri et al., 2018 {rf('haxhibeqiri18')}", "LoRaWAN survey", "Capacity and duty-cycle limits", "Not marine-specific"],
+             ["4", f"Jouhari et al., 2019 {rf('jouhari')}", "Underwater sensor network survey", "Acoustic, RF and optical links compared", "Underwater focus"],
+             ["5", f"Xu et al., 2019 {rf('xu')}", "Review of marine IoT monitoring", "Ocean sensing platforms and links", "Data loss not addressed"],
+             ["6", f"Centenaro et al., 2021 {rf('centenaro21')}", "Satellite IoT survey", "Coverage for remote buoys", "Very low throughput"],
+             ["7", f"Esposito et al., 2022 {rf('esposito22')}", "IoT early-warning review", "Common sensing architectures", "Assumes data arrives"],
+             ["8", f"Babiuch et al., 2019 {rf('babiuch19')}", "ESP32 for measurement and processing", "Low-cost Wi-Fi sensing board", "Lab study, no field test"],
+             ["9", f"Wimmers et al., 2019 {rf('wimmers19')}", "Deep learning on microwave imagery", "Shows what satellite channels reveal", "Needs real archives"],
+             ["10", f"Che et al., 2018 {rf('grud')}", "GRU-D with missing-value decay", "Better results despite gaps", "Offline clinical data"],
+             ["11", f"Cao et al., 2018 {rf('brits')}", "Bidirectional RNN imputation", "Strong gap filling", "Needs whole series"],
+             ["12", f"Yoon et al., 2018 {rf('gain')}", "GAN-based imputation (GAIN)", "Imputes without full data", "Hard to train"],
+             ["13", f"Tashiro et al., 2021 {rf('csdi21')}", "Diffusion-model imputation (CSDI)", "Probabilistic estimates", "Heavy compute"],
+             ["14", f"Du et al., 2023 {rf('saits23')}", "Self-attention imputation (SAITS)", "12–38 % lower error than BRITS", "Offline batches; GPU"],
+             ["15", f"Lim & Zohren, 2021 {rf('limz')}", "Deep time-series forecasting survey", "Forecasting model families", "No real-time telemetry"]],
+            [0.7, 3.7, 4.1, 4.3, 4.2], "Literature survey (15 articles, 2018–2023)")
+    d.p("**Gap:** imputation methods (GRU-D, BRITS, GAIN, CSDI, SAITS) work offline on stored datasets with heavy "
+        "frameworks; marine IoT and LPWAN studies describe links but not recovery; and sensor systems are rarely "
+        "tested against realistic burst loss with the true values kept for comparison. My part will generate "
+        "realistic readings and loss, record the truth so recovery can be measured, recover lost readings online, "
+        "and design low-cost nodes that send the same data.")
+    d.p(f"*Foundational methods we also build on (not counted in the 15):* the Gilbert–Elliott burst-loss channel "
+        f"{rf('gilbert')}, {rf('elliott')}.")
     d.h("Proposed Solution Form")
     d.p("**Form: coding and modelling first, low-cost fabrication later.** Simulated sensor nodes and a simulated "
         "satellite station give us unlimited, repeatable storm scenarios with known ground truth, which is essential "
@@ -477,7 +564,7 @@ def r1_sreehari():
     d.p("**Initial cost estimate for hardware (R1):** about ₹2,000–2,500 for two nodes including breadboards and "
         "cables; software costs nothing.")
     d.h("Team Role Split and Timeline to Review 2")
-    d.table(ROLES, [4.2, 4.4, 8.4], "Team role split")
+    d.table(ROLES["sreehari"], [4.2, 4.4, 8.4], "Team role split and interfaces")
     d.p("**My role** is the beginning of the data path and its repair: what the sensors send, how it gets lost, and "
         "how we recover it.")
     timeline(d, [["1", "25–31 Aug", "Sensor-node simulator: readings, sequence numbers, configurable loss",
@@ -486,16 +573,26 @@ def r1_sreehari():
                   "Missing sequence numbers are filled and marked"],
                  ["3", "8–14 Sep", "Integration test with gateway and server; hardware parts list", "Prototype shown at "
                   "Review 2; component list ready"]])
-    video(d, VID1, "R1")
+    video(d, VID1, "R1", "sreehari")
     rf.write(d)
     finish(d, f"{reg}_Sreehari_R1_Report")
 
 
 # ============================================================================ R2 shared helpers
-R2_RUN = ("To produce dated evidence for this report, the Review 2 prototype (repository commit `82bcb8a`, "
-          "16/9/2026) was re-run unchanged with three sensor nodes for 60 seconds; the logs are in "
-          "`docs/reports/evidence/r2_prototype/`. The team's original 12-second test reported 66 packets received, "
-          "11 reconstructed and 2 critical, with overall risk 100 and the alert active.")
+R2_RUN = {
+    "laksh": ("I re-ran my server, unchanged from repository commit `82bcb8a` (16/9/2026), with three sensor nodes "
+              "for 60 seconds to capture dated logs (`docs/reports/evidence/r2_prototype/`). In our original "
+              "12-second team test my `/status` endpoint reported 66 packets received, 11 reconstructed and 2 "
+              "critical, and `/predict` returned an overall risk of 100 with the alert on."),
+    "anvay": ("The gateway evidence below comes from a 60-second re-run of the unmodified Review 2 code (commit "
+              "`82bcb8a`) with three nodes; `gateway.log` and `crash_gw.log` are kept in "
+              "`docs/reports/evidence/r2_prototype/`. In the team's first 12-second test the server received 66 "
+              "packets through my gateway, 2 of them labelled CRITICAL."),
+    "sreehari": ("To check my nodes I re-ran the Review 2 prototype (commit `82bcb8a`, no changes) with BUOY_07, "
+                 "RADAR_COAST_A and BUOY_12 for 60 seconds; their logs (`buoy_07.log`, `radar.log`, `buoy_12.log`) "
+                 "are in `docs/reports/evidence/r2_prototype/`. In the original 12-second team test, the server "
+                 "filled 11 readings lost by my two nodes using `reconstruct_gap()`."),
+}
 
 
 # ============================================================================ R2 LAKSH
@@ -513,7 +610,10 @@ def r2_laksh():
     d.p("Input → process → output: **input** is a JSON record forwarded by the gateway over UDP port 9002 "
         "(node, seq, time, wind, temp, pressure, traffic_class); **process** checks the sequence number, fills gaps "
         "using the team's interpolation function, computes a risk score and stores the record; **output** is three "
-        "REST endpoints and an HTML dashboard (Figure 1).")
+        "REST endpoints and an HTML dashboard (Figure 2). Figure 1 shows where my modules sit in the whole "
+        "prototype.")
+    d.figure(os.path.join(RF, "R2_laksh_arch.png"), "Architecture of the R2 prototype; my modules (server, API, "
+             "dashboard) are highlighted", 15)
     d.figure(os.path.join(RF, "R2_laksh_server_flow.png"), "Flowchart of my central server (prototype)", 12.5)
     d.table([["Parameter", "Value", "Meaning"],
              ["GATEWAY_TO_SERVER_PORT", "9002 (UDP)", "Where the gateway sends packets"],
@@ -530,7 +630,7 @@ def r2_laksh():
                "**Running:** server, gateway and sensors run together; endpoints `/predict`, `/status`, "
                "`/telemetry/{node}` and the dashboard work.",
                "**Network:** the team's Packet Tracer topology is complete with OSPF routing; a ping from BUOY-01 to "
-               "the prediction server succeeds (Figure 3)."])
+               "the prediction server succeeds (Figure 4)."])
     d.p("The heart of the server is short; this is the startup fix and the prediction endpoint:")
     d.code(["@app.on_event(\"startup\")",
             "def start_listener():",
@@ -542,7 +642,7 @@ def r2_laksh():
             "        latest = {node_id: dq[-1] for node_id, dq in telemetry_store.items() if dq}",
             "    overall = max(rec[\"risk\"] for rec in latest.values())",
             "    return {\"overall_risk\": overall, \"alert\": overall >= 60, \"nodes\": latest}"])
-    d.p(R2_RUN)
+    d.p(R2_RUN["laksh"])
     d.figure(os.path.join(RF, "R2_laksh_status.png"), "My server's /status and /predict during the prototype re-run", 13.5)
     d.figure(os.path.join(AS, "pt_topology.png"), "The team's Packet Tracer topology (joint work); the data-centre "
              "side hosts my prediction and dashboard servers", 13)
@@ -554,16 +654,18 @@ def r2_laksh():
         "automated tests.")
     runs(d, "laksh")
     d.h("Justification of Design Choices")
-    d.table([["Choice", "Option", "Cost", "Ease of use", "Fit for our problem", "Decision"],
-             ["Web framework", "Flask", "Free", "Very easy", "Sync by default; background thread needs care", ""],
-             ["", "Django", "Free", "Heavy setup", "Too large for a small API", ""],
-             ["", "**FastAPI**", "Free", "Easy", "Async + startup hooks for the UDP thread; automatic API docs", "Chosen"],
-             ["Transport", "TCP", "—", "Easy", "Retransmissions hide the loss we must study; adds delay", ""],
-             ["", "MQTT broker", "Free", "Extra service", "Good later; adds a broker to run", ""],
-             ["", "**UDP datagrams**", "—", "Easy", "Loss is visible and measurable; matches lossy links", "Chosen"],
-             ["Dashboard update", "**Polling 2 s**", "—", "Simplest", "Good enough for the prototype", "Chosen now"],
-             ["", "WebSocket push", "—", "Moderate", "Lower latency; planned for the final system", "Next phase"]],
-            [2.6, 2.6, 1.4, 2.2, 5.6, 2.6], "Comparison of alternatives for my module")
+    d.table([["Choice", "Option", "Cost", "Accuracy / fit", "Availability", "Power", "Ease of use", "Decision"],
+             ["Web framework", "Flask", "Free", "Works; background thread needs care", "pip, mature", "Light", "Very easy", "—"],
+             ["", "Django", "Free", "Too large for a small API", "pip, mature", "Heavier", "Heavy setup", "—"],
+             ["", "**FastAPI**", "Free", "Startup hooks for the UDP thread; auto API docs", "pip, open source", "Light", "Easy", "Chosen"],
+             ["Transport", "TCP", "₹0", "Retransmits hide the loss we study; adds delay", "Built into OS", "Extra radio time", "Easy", "—"],
+             ["", "MQTT broker", "₹0", "Good later; extra hop", "Mosquitto, free", "Broker always on", "Extra service", "—"],
+             ["", "**UDP datagrams**", "₹0", "Loss visible and measurable", "Built into OS", "Least radio time", "Easy", "Chosen"],
+             ["Dashboard", "**Polling 2 s**", "₹0", "Up to 2 s stale", "Any browser", "Small repeated requests", "Simplest", "Chosen now"],
+             ["", "WebSocket push", "₹0", "Instant updates", "Needs extra package", "Fewer requests", "Moderate", "Next phase"],
+             ["Hosting", "**Own laptop**", "₹0", "Enough for demos", "Available now", "Laptop only", "Easy", "Chosen"],
+             ["", "Cloud VM", "≈US$5–10 / month", "Public URL", "Needs payment card", "Data centre", "Moderate", "Later"]],
+            [1.9, 2.7, 1.5, 3.1, 2.4, 2.0, 1.8, 1.6], "Comparison of alternatives for my module (cost, accuracy, availability, power, ease of use)")
     d.h("Updated Feasibility")
     d.table([["Aspect", "Review 1 estimate", "Now (Review 2)", "Reason for change"],
              ["Software cost", "₹0", "₹0", "All tools open source"],
@@ -601,8 +703,8 @@ def r2_laksh():
               "Packet Tracer topology"]], [8.5, 8.5], "Division of work")
     d.bullets(["Code: `central_server.py` at commit `82bcb8a` (" + REPO_URL + ").",
                "Logs: `server.log`, `api.log` and `crash_srv.log` in `docs/reports/evidence/r2_prototype/`."])
-    contrib_placeholder(d)
-    video(d, VID2, "R2")
+    contrib_placeholder(d, "laksh")
+    video(d, VID2, "R2", "laksh")
     finish(d, f"{reg}_LakshAhuja_R2_Report")
 
 
@@ -617,7 +719,9 @@ def r2_anvay():
           "and throttles normal traffic while a cyclone alert is active. This report covers the gateway's design, "
           "the working code, my design choices, feasibility, the problems I found by testing it, and my contribution.")
     d.h("Detailed Design")
-    d.p("The gateway has two threads (Figure 1). The **receiver** reads UDP port 9001, decodes the record, classifies "
+    d.figure(os.path.join(RF, "R2_anvay_arch.png"), "Architecture of the R2 prototype; my modules (gateway and "
+             "classification rule) are highlighted", 15)
+    d.p("Figure 1 shows where the gateway sits between the sensors and the server. It has two threads (Figure 2). The **receiver** reads UDP port 9001, decodes the record, classifies "
         "it and pushes (priority, order, record) into a priority queue. The **forwarder** takes the highest-priority "
         "record and sends it to the server on port 9002; while an alert is active, each NORMAL packet waits 0.5 s "
         "first. The alert switches on with any CRITICAL packet and clears after 10 s without one.")
@@ -648,7 +752,7 @@ def r2_anvay():
             "if record[\"traffic_class\"] != TRAFFIC_CRITICAL and cyclone_alert.is_set():",
             "    time.sleep(0.5)            # reserve bandwidth for critical traffic",
             "sock.sendto(encode(record), (HOST, GATEWAY_TO_SERVER_PORT))"])
-    d.p(R2_RUN)
+    d.p(R2_RUN["anvay"])
     d.figure(os.path.join(RF, "R2_anvay_gateway.png"), "Classification over time in the re-run (from my gateway's log)", 13.5)
     d.p("In the re-run the gateway forwarded 160 packets: 42 CRITICAL packets were sent immediately, and 28 NORMAL "
         "packets were throttled during the alert.")
@@ -659,15 +763,16 @@ def r2_anvay():
         "feature extraction, an LSTM for missing data, and a proper evaluation.")
     runs(d, "anvay")
     d.h("Justification of Design Choices")
-    d.table([["Choice", "Option", "Accuracy / quality", "Compute & power", "Ease", "Decision"],
-             ["Classifier", "**Threshold rule**", "Exact on breaches; no early warning", "Negligible", "Very easy", "Chosen now"],
-             ["", "Logistic regression on trends", "Can warn before breach", "Very low", "Easy", "Next phase"],
-             ["", "Deep network", "Possibly best", "High; needs GPU/data", "Hard", "Rejected"],
-             ["Forwarding", "FIFO queue", "Critical waits behind others", "Low", "Easiest", "Rejected"],
-             ["", "Fixed bandwidth cap per class", "Wastes capacity when idle", "Low", "Easy", "Rejected"],
-             ["", "**Priority queue**", "Critical first, adapts instantly", "Low", "Easy", "Chosen"],
-             ["Language", "**Python threads**", "Fast enough at our rates", "Runs on laptop / Pi", "Easy", "Chosen"]],
-            [2.4, 3.6, 3.6, 2.8, 1.8, 2.8], "Comparison of alternatives for my module")
+    d.table([["Choice", "Option", "Cost", "Accuracy / fit", "Availability", "Power", "Ease of use", "Decision"],
+             ["Classifier", "**Threshold rule**", "₹0", "Exact on breaches; no early warning", "Ready in common.py", "Negligible", "Very easy", "Chosen now"],
+             ["", "Logistic regression on trends", "₹0", "Can warn before a breach", "NumPy (free)", "Very low", "Easy", "Next phase"],
+             ["", "Deep network", "GPU or paid cloud", "Possibly best", "Needs labelled data we lack", "High", "Hard", "Rejected"],
+             ["Forwarding", "FIFO queue", "₹0", "Critical waits behind others", "Standard library", "Low", "Easiest", "Rejected"],
+             ["", "Fixed cap per class", "₹0", "Wastes capacity when idle", "Standard library", "Low", "Easy", "Rejected"],
+             ["", "**Priority queue**", "₹0", "Critical first; adapts instantly", "queue.PriorityQueue", "Low", "Easy", "Chosen"],
+             ["Edge device", "**Laptop**", "Owned", "Fast enough (< 1 % CPU)", "Available now", "≈30–60 W", "Easy", "Chosen"],
+             ["", "Raspberry Pi 4", "≈₹5,000", "Fast enough", "College lab", "≈3–6 W", "Moderate", "Optional"]],
+            [1.9, 2.7, 1.5, 3.1, 2.4, 2.0, 1.8, 1.6], "Comparison of alternatives for my module (cost, accuracy, availability, power, ease of use)")
     d.h("Updated Feasibility")
     d.table([["Aspect", "Review 1 estimate", "Now (Review 2)", "Reason"],
              ["Software cost", "₹0", "₹0", "Python standard library only"],
@@ -702,8 +807,8 @@ def r2_anvay():
               "Tracer topology"]], [8.5, 8.5], "Division of work")
     d.bullets(["Code: `edge_gateway.py` and `classify_traffic()` in `common.py`, commit `82bcb8a` (" + REPO_URL + ").",
                "Logs: `gateway.log` and `crash_gw.log` in `docs/reports/evidence/r2_prototype/`."])
-    contrib_placeholder(d)
-    video(d, VID2, "R2")
+    contrib_placeholder(d, "anvay")
+    video(d, VID2, "R2", "anvay")
     finish(d, f"{reg}_AnvaySharma_R2_Report")
 
 
@@ -723,7 +828,9 @@ def r2_sreehari():
         "falls), builds a compact JSON record and, unless the loss draw says the packet is lost, sends it to the "
         "gateway. **Gap filling:** when the server sees a jump in sequence numbers, my `reconstruct_gap()` linearly "
         "interpolates each variable between the readings before and after the gap and marks the result as "
-        "reconstructed (Figure 1).")
+        "reconstructed (Figure 2). Figure 1 places my modules in the whole prototype.")
+    d.figure(os.path.join(RF, "R2_sreehari_arch.png"), "Architecture of the R2 prototype; my modules (sensor nodes, "
+             "gap filling, planned ESP32 node) are highlighted", 15)
     d.figure(os.path.join(RF, "R2_sreehari_sensor_flow.png"), "Flowchart of my sensor node and gap filling (prototype)", 12.5)
     d.table([["Parameter", "Value", "Meaning"],
              ["--interval", "1 s", "Time between readings"],
@@ -739,7 +846,10 @@ def r2_sreehari():
                "**Running:** three simulated nodes (BUOY_07, RADAR_COAST_A, BUOY_12) with different loss rates and "
                "cyclone start times feed the gateway; the server marks filled readings as reconstructed.",
                "**Hardware:** parts list prepared (ESP32 + BMP280 per node); purchase planned after the software "
-               "interface is fixed."])
+               "interface is fixed. The circuit is designed (Figure 3) so that the node sends exactly the same "
+               "JSON as the simulator."])
+    d.figure(os.path.join(RF, "R2_sreehari_circuit.png"), "Circuit diagram of the planned ESP32 buoy node "
+             "(BMP280 on I²C, potentiometer as wind input, buzzer and LED for local alert)", 15)
     d.code(["if random.random() < loss_rate:",
             "    print(f\"[{node_id}] seq={seq:05d} LOST (simulated link loss)\")",
             "else:",
@@ -749,7 +859,7 @@ def r2_sreehari():
             "    gap = curr_record[\"seq\"] - prev_record[\"seq\"]",
             "    for i in range(1, gap):",
             "        frac = i / gap      # linear interpolation for each variable"])
-    d.p(R2_RUN)
+    d.p(R2_RUN["sreehari"])
     d.figure(os.path.join(RF, "R2_sreehari_sensor.png"), "Output of my sensor node in the re-run; red lines mark lost packets", 13.5)
     d.p("In the re-run my three nodes lost 22 packets in total; the server filled them using my function (22 "
         "reconstructed in `/status` at 60 s).")
@@ -760,16 +870,18 @@ def r2_sreehari():
         "logging, a learned reconstruction model, a satellite-station simulator, and the ESP32 nodes.")
     runs(d, "sreehari")
     d.h("Justification of Design Choices")
-    d.table([["Choice", "Option", "Approx. cost", "Realism / accuracy", "Power / ease", "Decision"],
-             ["Data source", "**Simulated nodes**", "₹0", "Controllable, known truth", "Easiest", "Chosen now"],
-             ["", "Recorded buoy archives", "₹0", "Real but no control over loss", "Needs data cleaning", "Later"],
-             ["", "ESP32 hardware nodes", "≈₹800 / node", "Real sensors, real Wi-Fi loss", "Low power; build effort", "Next phase"],
-             ["Gap filling", "Hold last value", "—", "Poor when values change fast", "Trivial", "Rejected"],
-             ["", "**Linear interpolation**", "—", "Good baseline; needs next reading", "Easy", "Chosen now"],
-             ["", "LSTM / GRU-D", "—", "Can learn dynamics", "Needs training", "Next phase"],
-             ["Microcontroller", "Arduino Uno + ESP8266", "≈₹700", "Works", "Two boards", "Rejected"],
-             ["", "**ESP32**", "≈₹400", "Wi-Fi built in", "Deep sleep available", "Planned"]],
-            [2.6, 3.6, 2.2, 3.6, 2.6, 2.4], "Comparison of alternatives for my module")
+    d.table([["Choice", "Option", "Cost", "Accuracy / fit", "Availability", "Power", "Ease of use", "Decision"],
+             ["Data source", "**Simulated nodes**", "₹0", "Controllable; true values known", "Instant", "None", "Easiest", "Chosen now"],
+             ["", "Recorded buoy archives", "₹0", "Real, but loss not controllable", "Public portals (registration)", "None", "Needs cleaning", "Later"],
+             ["", "ESP32 hardware nodes", "≈₹800 / node", "Real sensors, real Wi-Fi loss", "Local shops / online", "≈0.5 W sending; deep sleep", "Build effort", "Next phase"],
+             ["Gap filling", "Hold last value", "₹0", "Poor when values change fast", "Trivial", "Negligible", "Trivial", "Rejected"],
+             ["", "**Linear interpolation**", "₹0", "Good baseline; needs next reading", "Own code", "Negligible", "Easy", "Chosen now"],
+             ["", "LSTM / GRU-D", "₹0", "Can learn storm dynamics", "Own NumPy code", "Training on laptop CPU", "Needs training", "Next phase"],
+             ["Micro-controller", "Arduino Uno + ESP8266", "≈₹700", "Works", "Common", "Two boards", "Extra wiring", "Rejected"],
+             ["", "**ESP32**", "≈₹400", "Wi-Fi built in", "Very common", "Deep sleep available", "Arduino IDE", "Planned"],
+             ["Pressure sensor", "**BMP280**", "≈₹120", "±1 hPa absolute", "Very common", "Very low", "I²C, 4 wires", "Planned"],
+             ["", "BME280", "≈₹350", "Adds humidity", "Common", "Very low", "I²C, 4 wires", "Rejected (cost)"]],
+            [1.9, 2.7, 1.5, 3.1, 2.4, 2.0, 1.8, 1.6], "Comparison of alternatives for my module (cost, accuracy, availability, power, ease of use)")
     d.h("Updated Feasibility")
     d.table([["Aspect", "Review 1 estimate", "Now (Review 2)", "Reason for change"],
              ["Two hardware nodes", "₹2,000–2,500", "₹1,600–2,200", "BMP280 (≈₹120) chosen instead of BME280; a "
@@ -806,8 +918,8 @@ def r2_sreehari():
               "Packet Tracer topology"]], [8.5, 8.5], "Division of work")
     d.bullets(["Code: `sensor_node.py` and `reconstruct_gap()` in `central_server.py`, commit `82bcb8a` (" + REPO_URL + ").",
                "Logs: `buoy_07.log`, `buoy_12.log`, `radar.log` and `server.log` in `docs/reports/evidence/r2_prototype/`."])
-    contrib_placeholder(d)
-    video(d, VID2, "R2")
+    contrib_placeholder(d, "sreehari")
+    video(d, VID2, "R2", "sreehari")
     finish(d, f"{reg}_Sreehari_R2_Report")
 
 
